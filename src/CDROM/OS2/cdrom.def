@@ -1,0 +1,7 @@
+;-------------------------------------
+; CDROM.DEF module definition file
+;-------------------------------------
+
+NAME           CDROM  WINDOWCOMPAT
+DESCRIPTION    'CDROM (c) Patrick Haller'
+PROTMODE

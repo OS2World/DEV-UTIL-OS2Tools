@@ -1,0 +1,272 @@
+;-------------------------------------
+; DOSCALLS.DEF import fragment
+; for module definition files
+;-------------------------------------
+
+; The underscores are required for Borlames's Suckware Compiler.
+IMPORTS
+  _Dos32AcknowledgeSignalExc   = DOSCALLS.418
+  _Dos32AddMuxWaitSem          = DOSCALLS.341
+  _Dos32AliasMem               = DOSCALLS.298
+  _Dos32AliasPerfCtrs          = DOSCALLS.364
+  _Dos32AllocMem               = DOSCALLS.299
+  _Dos32AllocProtectedMem      = DOSCALLS.297
+  _Dos32AllocSharedMem         = DOSCALLS.300
+  _Dos32AllocThreadLocalMemory = DOSCALLS.454
+  _Dos32AsyncTimer             = DOSCALLS.350
+  _Dos32Beep                   = DOSCALLS.286
+  _Dos32CallNPipe              = DOSCALLS.240
+  _Dos32CancelLockRequest      = DOSCALLS.429
+  _Dos32Close                  = DOSCALLS.257
+  _Dos32CloseChangeNotify      = DOSCALLS.442
+  _Dos32CloseEventSem          = DOSCALLS.326
+  _Dos32CloseMutexSem          = DOSCALLS.333
+  _Dos32CloseMuxWaitSem        = DOSCALLS.339
+  _Dos32CloseQueue             = DOSCALLS.663
+  _Dos32CloseVDD               = DOSCALLS.310
+  _Dos32ConfigurePerf          = DOSCALLS.365
+  _Dos32ConnectNPipe           =  DOSCALLS.241
+  _Dos32Copy                   =  DOSCALLS.258
+  _Dos32CreateDir              =  DOSCALLS.270
+  _Dos32CreateEventSem         =  DOSCALLS.324
+  _Dos32CreateMutexSem         =  DOSCALLS.331
+  _Dos32CreateMuxWaitSem       =  DOSCALLS.337
+  _Dos32CreateNPipe            =  DOSCALLS.243
+  _Dos32CreatePipe             =  DOSCALLS.239
+  _Dos32CreateQueue            =  DOSCALLS.668
+  _Dos32CreateThread           =  DOSCALLS.311
+  _Dos32Debug                  =  DOSCALLS.317
+  _Dos32DeconPerf              = DOSCALLS.366
+  _Dos32Delete                 =  DOSCALLS.259
+  _Dos32DeleteDir              =  DOSCALLS.226
+  _Dos32DeleteMuxWaitSem       =  DOSCALLS.342
+  _Dos32DevConfig              =  DOSCALLS.231
+  _Dos32DevIOCtl               =  DOSCALLS.284
+  _Dos32DisconnectNPipe        =  DOSCALLS.242
+  _Dos32DLLTermDisp            =  DOSCALLS.592
+  _Dos32DumpProcess            =  DOSCALLS.113
+  _Dos32DupHandle              =  DOSCALLS.260
+  _Dos32DynamicTrace           =  DOSCALLS.316
+  _Dos32EditName               =  DOSCALLS.261
+  _Dos32EnterCritSec           =  DOSCALLS.232
+  _Dos32EnterMustComplete      =  DOSCALLS.380
+  _Dos32EnumAttribute          =  DOSCALLS.372
+  _Dos32ErrClass               =  DOSCALLS.211
+  _Dos32Error                  =  DOSCALLS.212
+;  _Dos32ExceptionCallback      =  DOSCALLS.0???
+;    0002:64A0	DOS32EXCEPTIONCALLBACK
+  _Dos32ExecPgm                =  DOSCALLS.283
+  _Dos32Exit                   =  DOSCALLS.234
+  _Dos32ExitCritSec            =  DOSCALLS.233
+  _Dos32ExitList               =  DOSCALLS.296
+  _Dos32ExitMustComplete       =  DOSCALLS.381
+  _Dos32FindClose              =  DOSCALLS.263
+  _Dos32FindFirst              =  DOSCALLS.264
+  _Dos32FindNext               =  DOSCALLS.265
+  _Dos32FlatToSel              =  DOSCALLS.425
+  _Dos32ForceDelete            =  DOSCALLS.110
+  _Dos32ForceSystemDump        =  DOSCALLS.444
+  _Dos32FreeMem                =  DOSCALLS.304
+  _Dos32FreeModule             =  DOSCALLS.322
+  _Dos32FreeResource           =  DOSCALLS.353
+  _Dos32FreeThreadLocalMemory  =  DOSCALLS.455
+  _Dos32FSAttach               =  DOSCALLS.269
+  _Dos32FSCtl                  =  DOSCALLS.285
+  _Dos32GetDateTime            =  DOSCALLS.230
+  _Dos32GetInfoBlocks          =  DOSCALLS.312
+  _Dos32GetNamedSharedMem      =  DOSCALLS.301
+  _Dos32GetResource            =  DOSCALLS.352
+  _Dos32GetSharedMem           =  DOSCALLS.302
+  _Dos32GiveSharedMem          =  DOSCALLS.303
+  _Dos32ICacheModule           =  DOSCALLS.416
+;  _Dos32IExitMustComplete      =  DOSCALLS.0???
+;    0002:6508	DOS32IEXITMUSTCOMPLETE
+  _Dos32InitializePorthole     =  DOSCALLS.580
+  _Dos32InsertMessage          =  DOSCALLS.386
+;  _Dos32IProtectRead           =  DOSCALLS.0???
+;    0002:6478	DOS32IPROTECTREAD
+;  _Dos32IProtectWrite          =  DOSCALLS.0???
+;    0002:6488	DOS32IPROTECTWRITE
+  _Dos32IQueryMessageCP        =  DOSCALLS.390
+  _Dos32IRaiseException        =  DOSCALLS.594
+;  _Dos32IRead                  =  DOSCALLS.0???
+;  _Dos32IWrite                 =  DOSCALLS.0???
+;    0002:6480	DOS32IWRITE
+  _Dos32KillProcess            =  DOSCALLS.235
+  _Dos32KillThread             =  DOSCALLS.111
+  _Dos32LoadModule             =  DOSCALLS.318
+  _Dos32MapCase                =  DOSCALLS.397
+  _Dos32Move                   =  DOSCALLS.271
+  _Dos32Open                   =  DOSCALLS.273
+  _Dos32OpenChangeNotify       =  DOSCALLS.440
+  _Dos32OpenEventSem           =  DOSCALLS.325
+  _Dos32OpenMutexSem           =  DOSCALLS.332
+  _Dos32OpenMuxWaitSem         =  DOSCALLS.338
+  _Dos32OpenQueue              =  DOSCALLS.667
+  _Dos32OpenVDD                =  DOSCALLS.308
+;  _Dos32PCreateDir             =  DOSCALLS.0???
+;    0002:3370	DOS32PCREATEDIR
+  _Dos32PeekNPipe              =  DOSCALLS.244
+  _Dos32PeekQueue              =  DOSCALLS.665
+;  _Dos32PEnumAttribute         =  DOSCALLS.0???
+;    0002:4834	DOS32PENUMATTRIBUTE
+  _Dos32PerfSysCall         = DOSCALLS.976
+;  _Dos32PFindFirst             =  DOSCALLS.0???
+;    0002:2F44	DOS32PFINDFIRST
+;  _Dos32PFindNext              =  DOSCALLS.0???
+;    0002:53C0	DOS32PFINDNEXT
+  _Dos32PhysicalDisk           =  DOSCALLS.287
+  _Dos32PM16SemChk             =  DOSCALLS.596
+  _Dos32PM16SemRst             =  DOSCALLS.875
+  _Dos32PMPostEventSem         =  DOSCALLS.590
+  _Dos32PMRequestMutexSem      =  DOSCALLS.593
+  _Dos32PMWaitEventSem         =  DOSCALLS.591
+  _Dos32PMWaitMuxWaitSem       =  DOSCALLS.595
+;  _Dos32POpen                  =  DOSCALLS.0???
+;    0002:12B8	DOS32POPEN
+  _Dos32PostEventSem           =  DOSCALLS.328
+;  _Dos32PProtectEnumAttribute  =  DOSCALLS.0???
+;    0002:4A8D	DOS32PPROTECTENUMATTRIBUTE
+;  _Dos32PProtectOpen           =  DOSCALLS.0???
+;    0002:3DC8	DOS32PPROTECTOPEN
+;  _Dos32PProtectQueryFileInfo=  DOSCALLS.0???
+;    0002:40C2	DOS32PPROTECTQUERYFILEINFO
+;  _Dos32PProtectSetFileInfo    =  DOSCALLS.0???
+;    0002:460A	DOS32PPROTECTSETFILEINFO
+;  _Dos32PQueryFileInfo         =  DOSCALLS.0???
+;    0002:2944	DOS32PQUERYFILEINFO
+;  _Dos32PQueryFSAttach         =  DOSCALLS.0???
+;    0002:5ECD	DOS32PQUERYFSATTACH
+;  _Dos32PQueryPathInfo         =  DOSCALLS.0???
+;    0002:1813	DOS32PQUERYPATHINFO
+  _Dos32Profile           = DOSCALLS.377
+  _Dos32ProtectClose           =  DOSCALLS.638
+  _Dos32ProtectEnumAttribute   =  DOSCALLS.636
+  _Dos32ProtectOpen            =  DOSCALLS.637
+  _Dos32ProtectQueryFHState    =  DOSCALLS.645
+  _Dos32ProtectQueryFileInfo   =  DOSCALLS.646
+  _Dos32ProtectRead            =  DOSCALLS.641
+  _Dos32ProtectSetFHState      =  DOSCALLS.644
+  _Dos32ProtectSetFileInfo     =  DOSCALLS.643
+  _Dos32ProtectSetFileLocks    =  DOSCALLS.639
+  _Dos32ProtectSetFilePtr      =  DOSCALLS.621
+  _Dos32ProtectSetFileSize     =  DOSCALLS.640
+  _Dos32ProtectWrite           =  DOSCALLS.642
+;  _Dos32PSetFileInfo           =  DOSCALLS.0???
+;    0002:43E4	DOS32PSETFILEINFO
+;  _Dos32PSetPathInfo           =  DOSCALLS.0???
+;    0002:1580	DOS32PSETPATHINFO
+  _Dos32PurgeQueue             =  DOSCALLS.662
+  _Dos32PutMessage             =  DOSCALLS.387
+  _Dos32QueryABIOSSupport      =  DOSCALLS.371
+  _Dos32QueryAppType           =  DOSCALLS.323
+  _Dos32QueryCollate           =  DOSCALLS.398
+  _Dos32QueryCP                =  DOSCALLS.291
+  _Dos32QueryCtryInfo          =  DOSCALLS.395
+  _Dos32QueryCurrentDir        =  DOSCALLS.274
+  _Dos32QueryCurrentDisk       =  DOSCALLS.275
+  _Dos32QueryDBCSEnv           =  DOSCALLS.396
+  _Dos32QueryDOSProperty       =  DOSCALLS.373
+  _Dos32QueryEventSem          =  DOSCALLS.330
+  _Dos32QueryExtLIBPATH        =  DOSCALLS.874
+  _Dos32QueryFHState           =  DOSCALLS.276
+  _Dos32QueryFileInfo          =  DOSCALLS.279
+  _Dos32QueryFSAttach          =  DOSCALLS.277
+  _Dos32QueryFSInfo            =  DOSCALLS.278
+  _Dos32QueryHeaderInfo        =  DOSCALLS.582
+  _Dos32QueryHType             =  DOSCALLS.224
+  _Dos32QueryMem               = DOSCALLS.306
+  _Dos32QueryMemState          = DOSCALLS.307
+  _Dos32QueryModFromEIP        =  DOSCALLS.360
+  _Dos32QueryModuleHandle      =  DOSCALLS.319
+  _Dos32QueryModuleName        =  DOSCALLS.320
+  _Dos32QueryMutexSem          =  DOSCALLS.336
+  _Dos32QueryMuxWaitSem        =  DOSCALLS.343
+  _Dos32QueryNPHState          =  DOSCALLS.245
+  _Dos32QueryNPipeInfo         =  DOSCALLS.248
+  _Dos32QueryNPipeSemState     =  DOSCALLS.249
+   Dos32QueryPageUsage         = DOSCALLS.358
+  _Dos32QueryPathInfo          =  DOSCALLS.223
+  _Dos32QueryProcAddr          =  DOSCALLS.321
+  _Dos32QueryProcType          =  DOSCALLS.586
+  _Dos32QueryQueue             =  DOSCALLS.664
+  _Dos32QueryResourceSize      =  DOSCALLS.572
+  _Dos32QuerySysInfo           =  DOSCALLS.348
+  _Dos32QuerySysState          =  DOSCALLS.368
+  _Dos32QueryThreadContext     =  DOSCALLS.877
+  _Dos32QueryVerify            =  DOSCALLS.225
+  _Dos32R3ExceptionDispatcher  =  DOSCALLS.548
+;  _Dos32R3ExitAddr             =  DOSCALLS.0???
+;    0004:C048	DOS32R3EXITADDR
+  _Dos32R3FRestor              =  DOSCALLS.600
+  _Dos32RaiseException         =  DOSCALLS.356
+  _Dos32RawReadNPipe           =  DOSCALLS.246
+  _Dos32RawWriteNPipe          =  DOSCALLS.247
+  _Dos32Read                   =  DOSCALLS.281
+  _Dos32ReadQueue              =  DOSCALLS.661
+  _Dos32RegisterPerfCtrs       = DOSCALLS.367
+  _Dos32ReleaseMutexSem        =  DOSCALLS.335
+  _Dos32ReplaceModule          =  DOSCALLS.417
+  _Dos32RequestMutexSem        =  DOSCALLS.334
+  _Dos32RequestVDD             =  DOSCALLS.309
+  _Dos32ResetBuffer            =  DOSCALLS.254
+  _Dos32ResetChangeNotify      =  DOSCALLS.441
+  _Dos32ResetEventSem          =  DOSCALLS.327
+  _Dos32ResumeThread           =  DOSCALLS.237
+  _Dos32ScanEnv                =  DOSCALLS.227
+  _Dos32SearchPath             =  DOSCALLS.228
+  _Dos32SelectSession          =  DOSCALLS.670
+  _Dos32SelToFlat              =  DOSCALLS.426
+  _Dos32SendSignalException    =  DOSCALLS.379
+  _Dos32SetCP                  =  DOSCALLS.288
+  _Dos32SetCurrentDir          =  DOSCALLS.255
+  _Dos32SetDateTime            =  DOSCALLS.292
+  _Dos32SetDefaultDisk         =  DOSCALLS.220
+  _Dos32SetDOSProperty         =  DOSCALLS.374
+  _Dos32SetExceptionHandler    =  DOSCALLS.354
+  _Dos32SetExtLIBPATH          =  DOSCALLS.873
+  _Dos32SetFHState             =  DOSCALLS.221
+  _Dos32SetFileInfo            =  DOSCALLS.218
+  _Dos32SetFileLocks           =  DOSCALLS.428
+  _Dos32SetFilePtr             =  DOSCALLS.256
+  _Dos32SetFileSize            =  DOSCALLS.272
+  _Dos32SetFSInfo              =  DOSCALLS.222
+  _Dos32SetMaxFH               =  DOSCALLS.209
+  _Dos32SetMem                 =  DOSCALLS.305
+  _Dos32SetNPHState            =  DOSCALLS.250
+  _Dos32SetNPipeSem            =  DOSCALLS.251
+  _Dos32SetPathInfo            =  DOSCALLS.219
+  _Dos32SetPriority            =  DOSCALLS.236
+  _Dos32SetProcessCP           =  DOSCALLS.289
+  _Dos32SetRelMaxFH            =  DOSCALLS.382
+  _Dos32SetSession             =  DOSCALLS.671
+  _Dos32SetSignalExceptionFoc  =  DOSCALLS.378
+  _Dos32SetVerify              =  DOSCALLS.210
+  _Dos32Shutdown               =  DOSCALLS.415
+  _Dos32Sleep                  =  DOSCALLS.229
+  _Dos32StartSession           =  DOSCALLS.669
+  _Dos32StartTimer             =  DOSCALLS.351
+  _Dos32StopSession            =  DOSCALLS.672
+  _Dos32StopTimer              =  DOSCALLS.290
+  _Dos32SubAllocMem            =  DOSCALLS.345
+  _Dos32SubFreeMem             =  DOSCALLS.346
+  _Dos32SubSetMem              =  DOSCALLS.344
+  _Dos32SubUnsetMem            =  DOSCALLS.347
+  _Dos32SuppressPopups         =  DOSCALLS.114
+  _Dos32SuspendThread          =  DOSCALLS.238
+  _Dos32SysCtl                 =  DOSCALLS.876
+  _Dos32TmrQueryFreq           =  DOSCALLS.362
+  _Dos32TmrQueryTime           =  DOSCALLS.363
+  _Dos32TransactNPipe          =  DOSCALLS.252
+  _Dos32TrueGetMessage         =  DOSCALLS.388
+  _Dos32UnsetExceptionHandler  =  DOSCALLS.355
+  _Dos32UnwindException        =  DOSCALLS.357
+  _Dos32VerifyPIDTID           =  DOSCALLS.460
+  _Dos32WaitChild              =  DOSCALLS.280
+  _Dos32WaitEventSem           =  DOSCALLS.329
+  _Dos32WaitMuxWaitSem         =  DOSCALLS.340
+  _Dos32WaitNPipe              =  DOSCALLS.253
+  _Dos32WaitThread             =  DOSCALLS.349
+  _Dos32Write                  =  DOSCALLS.282
+  _Dos32WriteQueue             =  DOSCALLS.666
+

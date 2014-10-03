@@ -1,0 +1,15 @@
+[DATUM] 
+
+Exception in ________
+Trap ____   ERRCD=____ ERACC=____ ERLIM=________
+EAX=________ EBX=________ ECX=________ EDX=________
+ESI=________ EDI=________ EBP=________ FLG=________
+CS:EIP=____:________ CSACC=____ CSLIM=________
+SS:ESP=____:________ SSACC=____ SSLIM=________
+DS=____ DSACC=____ DSLIM=________ CR0=________
+ES=____ ESACC=____ ESLIM=________ CR2=________
+FS=____ FSACC=____ FSLIM=________
+GS=____ GSACC=____ GSLIM=________
+
+048600b4, 8.162, 94/09/19
+##160:ff5c34c - 000d:a34c

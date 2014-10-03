@@ -1,0 +1,7 @@
+;-------------------------------------
+; TESTCOM.DEF module definition file
+;-------------------------------------
+
+NAME           TESTCOM  WINDOWCOMPAT
+DESCRIPTION    'TestCOM (c) Patrick Haller'
+PROTMODE

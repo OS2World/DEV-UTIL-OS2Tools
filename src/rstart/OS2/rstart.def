@@ -1,0 +1,7 @@
+;-------------------------------------
+; RSTART.DEF module definition file
+;-------------------------------------
+
+NAME           RSTART  WINDOWCOMPAT
+DESCRIPTION    'RStart (c) Patrick Haller'
+PROTMODE

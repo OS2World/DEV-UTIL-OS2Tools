@@ -1,0 +1,177 @@
+;-------------------------------------
+; ToolRT.DEF module definition file
+;-------------------------------------
+
+LIBRARY        ToolRT INITINSTANCE TERMINSTANCE
+DESCRIPTION    '@#Netlabs:1.11#@ ToolRT (c) Patrick Haller'
+PROTMODE
+
+DATA MULTIPLE NONSHARED READWRITE LOADONCALL
+CODE LOADONCALL
+SEGMENTS
+   DDE4_DATA32 CLASS 'DATA' NONSHARED READWRITE LOADONCALL
+   LIBDATA16   CLASS 'DATA' NONSHARED READWRITE LOADONCALL
+
+
+EXETYPE OS2
+
+EXPORTS
+
+; ---------------------------
+; The internal tool functions
+; ---------------------------
+  ArgMapToTarget        =ArgMapToTarget
+  ArgHelp               =ArgHelp
+  ArgParse              =ArgParse
+  ArgGetMissing         =ArgGetMissing
+  ArgIsArgumentMissing  =ArgIsArgumentMissing
+  ArgStandard           =ArgStandard
+  ToolsVersion          =ToolsVersion
+  ToolsRevision         =ToolsRevision
+  ToolsPrintTitle       =ToolsPrintTitle
+  ToolsErrorDos         =ToolsErrorDos
+  ToolsErrorDosEx       =ToolsErrorDosEx
+  ToolsPerfQuery        =ToolsPerfQuery
+  ToolsDumpHex          =ToolsDumpHex
+  ToolsDumpAscii        =ToolsDumpAscii
+  ToolsReadFileToBuffer =ToolsReadFileToBuffer
+  ToolsConfirmationQuery=ToolsConfirmationQuery
+  ToolsDateToAge        =ToolsDateToAge
+  ToolsDateCompare      =ToolsDateCompare
+  ToolsCrc32String      =ToolsCrc32String
+  ToolsCrc32Buffer      =ToolsCrc32Buffer
+  ToolsCrc32BufferFinalize=ToolsCrc32BufferFinalize
+  ToolsMD5Initialize    =ToolsMD5Initialize
+  ToolsMD5Update        =ToolsMD5Update
+  ToolsMD5Finalize      =ToolsMD5Finalize  
+  StrTrim               =StrTrim
+  StrValueToSize        =StrValueToSize
+  StrValueToSizeFloat   =StrValueToSizeFloat
+  StrFDateTimeToString  =StrFDateTimeToString
+  StrFAttrToString      =StrFAttrToString
+  StrFAttrToStringShort =StrFAttrToStringShort
+  StrToNumber           =StrToNumber
+  StackPop              =StackPop
+  StackPush             =StackPush
+  StackIsEmpty          =StackIsEmpty
+  StackInit             =StackInit
+  StackFlush            =StackFlush
+  StackDump             =StackDump
+  LogOpen               =LogOpen
+  LogClose              =LogClose
+  LogPrint              =LogPrint
+  ProfileGetTimestamp   = ProfileGetTimestamp
+
+
+; ---------------
+; Runtime Exports
+; ---------------
+
+  __EDCThunkProlog
+  __EDC3216
+  _beginthread
+  _callback_opt_sys
+  _CRT_init
+  _CRT_term
+  _ctype
+  _DosSelToFlat
+  _DosFlatToSel
+  _environ
+  _errno
+  _EXE_Exception
+  _exception_procinit
+  _fltused
+  _fpninit
+  _fpreset
+  _fprintfieee
+  _getch
+  _getcwd
+  _getpid
+  _kbhit
+  _matherr
+  _PrintErrMsg
+  _printfieee
+  _putch
+  _read
+  _sprintfieee
+  _sscanfieee
+  _terminate
+  _ultoa
+  _vsprintfieee
+  asctime
+  atoi
+  atol
+  calloc
+  exit
+  fclose
+  feof
+  ferror
+  fflush
+  fgets
+  fopen
+  _fdopen
+  fputc
+  fputs
+  fread
+  free
+  fseek
+  ftell
+  fwrite
+  getenv
+  gets
+  localtime
+  malloc
+  memcmp
+  memcpy
+  memmove
+  memset
+  perror
+  puts
+  qsort
+  realloc
+  rewind
+  rand
+  setvbuf
+  signal
+  srand
+  stderr
+  stdout
+  strcat
+  strchr
+  strcmp
+  strcpy
+  strcspn
+  strdup
+  stricmp
+  strlen
+  strlwr
+  strncat
+  strncmp
+  strncpy
+  strnicmp
+  strrchr
+  strstr
+  strtok
+  strupr
+  system
+  time
+  _Exception_CPP
+  _assert
+  __ctdtused
+  sqrt
+
+; operator delete(void*)
+; operator new[](unsigned int)
+; operator delete[](void*)
+  __nw__FUiPCcT1
+  __dl__FPvPCcUi
+  __nw__FUiPv
+  __nw__FUiPCcT1Pv
+  __nw__FUi
+  __dl__FPv
+  __PureVirtualCalled
+
+  ;kso added - not at all sure if they should be here.
+  _PGLOBAL_PTR
+  _exception_dllinit
+

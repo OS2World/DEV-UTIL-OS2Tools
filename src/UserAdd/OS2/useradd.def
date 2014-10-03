@@ -1,0 +1,7 @@
+;-------------------------------------
+; UserAdd.DEF module definition file
+;-------------------------------------
+
+NAME           UserAdd  WINDOWCOMPAT
+DESCRIPTION    'UserAdd (c) Patrick Haller'
+PROTMODE

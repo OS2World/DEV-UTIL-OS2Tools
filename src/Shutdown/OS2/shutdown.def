@@ -1,0 +1,7 @@
+;-------------------------------------
+; SHUTDOWN.DEF module definition file
+;-------------------------------------
+
+NAME           SHUTDOWN  WINDOWCOMPAT
+DESCRIPTION    'ShutDown (c) Patrick Haller'
+PROTMODE

@@ -1,0 +1,7 @@
+;----------------------------------
+; XArgs.DEF module definition file
+;----------------------------------
+
+NAME           XArgs  WINDOWCOMPAT
+DESCRIPTION    'XArgs (c) Patrick Haller'
+PROTMODE

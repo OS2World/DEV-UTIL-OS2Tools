@@ -1,0 +1,70 @@
+2001/06/19
+
+Current To-Do List:
+-------------------
+
+- create a powerful build system 
+    - change target directory might be preferable w/o extension
+    - nmake clean missing
+    - remove dependency of adding \lib to the %LIB% environment variable
+    - export all functions from toolrt.dll by ordinal, rather than name
+    - lxlite release executables
+    - correct the inference rules to care about the source files
+    - compatibility with make programs other than IBM NMake 5
+    - correct bootstrapping (toolrt.dll and .lib are absent)
+    - finish all compilation environments    
+
+- translate all documents and sources into plain english :)
+
+- create a nice installer  
+  - install executables to a folder
+  - add to path and libpath
+  - create WPS objects for online help, etc.
+
+- .INF documentation
+
+- Tool for backing up and restoring partition table data
+  incl. LVM-Support
+  incl. Dumping (Explaining) the structures)
+  incl. backing up the 1st n sectors of each partition (HPFS Super,Spare,etc)
+  backup / restore / verify (monitor changes)
+  - tool zum sichern+restaurieren,etc. von MBR, part.tbl, FATs, HPFS super+spare, log.Bootrecords, etc.
+    + check / plausibilisierung der werte in den tabellen
+    + vorschlaege fuer richtige werte, wenn da fehler gefunden wurden
+    + sichern+restaurieren von phys. / log. plattenimages (incl. compression+test!)
+
+- add support for undetermined number of default parameters
+  ("WHICH file1 file2 file3 file4", 
+    ArgDefaultHandler(pfnDefaultHandler, pTabArguments))
+
+
+(very) Old To-Dos:
+------------------
+
+- simple environment variable editor for interactive and automatic editing
+  environment variables
+- multithreaded fast grep
+- ps / map
+- module scanner / diffs between modules
+  - new / removed functions (exports)
+  - bldlevel signature
+  - perhaps "function length"
+  - DosQueryModuleHeader
+  - DosQueryProcAddr
+- spooler tool (auch fuer remote, wenn vorhanden)
+- file monitor / file maintenance
+  + CRC32 calculation
+  + displays new/changed/removed files since last log run
+  + store calculated CRCs in index files (one per drive)
+  + finds duplicate files (CRC32ID, binary comparsion)
+  + apply filter to new files (generate batch files / rexx scripts)
+  + use dbase database format with indices ?
+- lightweight dbase tools + rexx dll + api dll
+- dd (unix like)
+  + multithreaded (in-thd, out-thd)
+  + compression
+- testcom for testing the serial ports
+- xargs for argument expansion
+- tools: cut + paste (areas of within a binary file)
+- gradd configuration tool
+  (query driver info + caps, configure caps)

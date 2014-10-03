@@ -1,0 +1,7 @@
+;-------------------------------------
+; EXEINFO.DEF module definition file
+;-------------------------------------
+
+NAME           EXEINFO  WINDOWCOMPAT
+DESCRIPTION    'EXEINFO (c) Patrick Haller'
+PROTMODE

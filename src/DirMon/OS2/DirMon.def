@@ -1,0 +1,7 @@
+;-------------------------------------
+; DirMon.DEF module definition file
+;-------------------------------------
+
+NAME           DirMonitor  WINDOWCOMPAT
+DESCRIPTION    'DirMonitor (c) Patrick Haller'
+PROTMODE

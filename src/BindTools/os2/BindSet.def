@@ -1,0 +1,5 @@
+; $Id: BindSet.def,v 1.1 2001/06/07 14:10:41 bird Exp $
+;
+NAME BindSet WINDOWCOMPAT
+DESCRIPTION "BindTools - BindSet! Copyright (c) knut st. osmundsen 2001."
+

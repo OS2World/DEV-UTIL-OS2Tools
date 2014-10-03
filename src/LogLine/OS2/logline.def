@@ -1,0 +1,7 @@
+;-------------------------------------
+; LogLine.DEF module definition file
+;-------------------------------------
+
+NAME           LogLine WINDOWCOMPAT
+DESCRIPTION    'LogLine (c) Patrick Haller'
+PROTMODE

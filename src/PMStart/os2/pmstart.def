@@ -1,0 +1,9 @@
+; Module Description for PMStart
+
+NAME         PMStart WINDOWAPI
+
+DESCRIPTION            'PMStart (c) Patrick Haller'
+PROTMODE
+
+HEAPSIZE               8192
+STACKSIZE              65536

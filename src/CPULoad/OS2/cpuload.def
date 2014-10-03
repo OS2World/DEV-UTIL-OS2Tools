@@ -1,0 +1,7 @@
+;-------------------------------------
+; CPULoad.DEF module definition file
+;-------------------------------------
+
+NAME           CPULoad  WINDOWCOMPAT
+DESCRIPTION    'CPULoad (c) Patrick Haller'
+PROTMODE

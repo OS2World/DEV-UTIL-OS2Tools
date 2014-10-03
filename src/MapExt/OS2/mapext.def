@@ -1,0 +1,7 @@
+;-------------------------------------
+; MapExt.DEF module definition file
+;-------------------------------------
+
+NAME           MapExt  WINDOWCOMPAT
+DESCRIPTION    'Map File Extension (c) Patrick Haller'
+PROTMODE

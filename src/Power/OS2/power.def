@@ -1,0 +1,7 @@
+;-------------------------------------
+; Power.DEF module definition file
+;-------------------------------------
+
+NAME           Power  WINDOWCOMPAT
+DESCRIPTION    'Power (c) Patrick Haller'
+PROTMODE

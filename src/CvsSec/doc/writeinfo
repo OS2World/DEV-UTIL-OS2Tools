@@ -1,0 +1,22 @@
+# The CVSSEC tool scans this file to determine write access.
+# The concerned users will have to be in the "writers" file as well.
+#
+# The idea is to provide fine granular access control within the 
+# repository directories, thus avoiding having to setup multiple 
+# repositories.
+#
+# - comment lines start with a "#"
+# - an access control that is also valid for all subsequent 
+#   subdirectories ends with a "*"
+#   e. g. /my/directory* would match /my/directory and /my/directory/whatever ...
+# 
+# Patrick Haller, 2001/03/07
+#
+
+/CVSROOT                                haller user2
+/projects                               haller user2
+/projects/project1                      haller user2
+/projects/project2                      haller user2
+/projects/project2/sub1                 haller user2 
+/projects/project2/sub2*                haller user2 user3
+/*                                      haller 

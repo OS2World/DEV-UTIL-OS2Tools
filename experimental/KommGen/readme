@@ -1,0 +1,10 @@
++ Comment -> Kopierroutine *WESENTLICH* verbessern !
+- Fehlerbehandlung verbessern
+- NLS beim Tagesnamen
+- Hilfesystem
+- evtl. Type-listbox neue Begriffe dazu lernen lassen
+- Menpunkte ein/ausschalten...
+
+"Kommentarentferner"
+- STRINGs exportieren,
+  evtl. automatisch interaktiv durch Variablen ersetzen

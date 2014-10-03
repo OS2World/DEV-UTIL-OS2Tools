@@ -1,0 +1,7 @@
+;-------------------------------------
+; INFO.DEF module definition file
+;-------------------------------------
+
+NAME           INFO  WINDOWCOMPAT
+DESCRIPTION    'INFO (c) Patrick Haller'
+PROTMODE

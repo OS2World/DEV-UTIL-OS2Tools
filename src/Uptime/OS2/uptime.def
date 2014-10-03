@@ -1,0 +1,7 @@
+;-------------------------------------
+; UPTIME.DEF module definition file
+;-------------------------------------
+
+NAME           UPTime  WINDOWCOMPAT
+DESCRIPTION    'UpTime (c) Patrick Haller'
+PROTMODE

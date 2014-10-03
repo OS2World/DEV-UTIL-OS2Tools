@@ -1,0 +1,7 @@
+;-------------------------------------
+; CVSSEC.DEF module definition file
+;-------------------------------------
+
+NAME           CVSSEC  WINDOWCOMPAT
+DESCRIPTION    'CVSSEC (c) Patrick Haller'
+PROTMODE

@@ -1,0 +1,22 @@
+;-------------------------------------
+; PerfCall.DEF module definition file
+;-------------------------------------
+
+LIBRARY        PHSTools
+DESCRIPTION    '@#PHS:1.00#@ PerfCall (c) Patrick Haller Systemtechnik'
+PROTMODE
+
+CODE MOVEABLE
+DATA MULTIPLE MOVEABLE
+
+STACKSIZE 0
+
+EXETYPE OS2
+
+EXPORTS
+  Dos32AliasPerfCtrs    = Dos32AliasPerfCtrs
+  Dos32ConfigurePerf    = Dos32ConfigurePerf
+
+IMPORTS
+  OS2AliasPerfCtrs      = DOSCALL1.364
+  OS2ConfigurePerf      = DOSCALL1.365

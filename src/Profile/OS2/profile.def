@@ -1,0 +1,7 @@
+;-------------------------------------
+; Profile.DEF module definition file
+;-------------------------------------
+
+NAME           Profile  WINDOWCOMPAT
+DESCRIPTION    'Profile (c) Patrick Haller'
+PROTMODE

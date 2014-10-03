@@ -1,0 +1,7 @@
+;-------------------------------------
+; FixACLs.DEF module definition file
+;-------------------------------------
+
+NAME           FixACLs  WINDOWCOMPAT
+DESCRIPTION    'FixACLs (c) Patrick Haller'
+PROTMODE

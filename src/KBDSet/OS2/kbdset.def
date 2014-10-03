@@ -1,0 +1,7 @@
+;-------------------------------------
+; KBDSET.DEF module definition file
+;-------------------------------------
+
+NAME            KBDSET  WINDOWCOMPAT
+DESCRIPTION     'KbdSet (c) Patrick Haller'
+PROTMODE

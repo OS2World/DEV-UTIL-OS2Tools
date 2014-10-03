@@ -1,0 +1,7 @@
+;-------------------------------------
+; REPLACE.DEF module definition file
+;-------------------------------------
+
+NAME           Replace  WINDOWCOMPAT
+DESCRIPTION    'Replace (c) Patrick Haller'
+PROTMODE

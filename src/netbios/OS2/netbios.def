@@ -1,0 +1,7 @@
+;------------------------------------
+; NetBios.DEF module definition file
+;------------------------------------
+
+NAME           NetBios  WINDOWCOMPAT
+DESCRIPTION    'NetBios (c) Patrick Haller'
+PROTMODE

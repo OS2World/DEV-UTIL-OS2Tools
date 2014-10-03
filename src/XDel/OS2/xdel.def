@@ -1,0 +1,7 @@
+;-------------------------------------
+; XDEL.DEF module definition file
+;-------------------------------------
+
+NAME           XDEL  WINDOWCOMPAT
+DESCRIPTION    'Extended Delete (c) Ralf Lohmueller'
+PROTMODE

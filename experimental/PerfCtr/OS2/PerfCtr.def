@@ -1,0 +1,13 @@
+;-------------------------------------
+; PerfCtr.DEF module definition file
+;-------------------------------------
+
+NAME           PerfCtr  WINDOWCOMPAT
+DESCRIPTION    'PerfCtr (c) Patrick Haller'
+PROTMODE
+
+IMPORTS
+  Dos32AliasPerfCtrs                = DOSCALLS.364
+  Dos32ConfigurePerf                = DOSCALLS.365
+  Dos32DeconPerf                    = DOSCALLS.366
+  Dos32RegisterPerfCtrs             = DOSCALLS.367

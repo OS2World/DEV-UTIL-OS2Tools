@@ -1,0 +1,8 @@
+;-------------------------------------
+; DEFRAG.DEF module definition file
+;-------------------------------------
+
+NAME           DEFRAG  WINDOWCOMPAT
+DESCRIPTION    'Defrag (c) Patrick Haller'
+PROTMODE
+

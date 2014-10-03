@@ -1,0 +1,9 @@
+; Module Description for Kommentargenerator/2
+
+NAME         KommGen  WINDOWAPI
+
+DESCRIPTION            'Kommentargenerator/2'
+PROTMODE
+
+HEAPSIZE               8192
+STACKSIZE              4096

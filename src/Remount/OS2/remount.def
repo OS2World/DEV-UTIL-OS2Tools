@@ -1,0 +1,7 @@
+;-------------------------------------
+; ReMount.DEF module definition file
+;-------------------------------------
+
+NAME           ReMount  WINDOWCOMPAT
+DESCRIPTION    'ReMount (c) Patrick Haller'
+PROTMODE

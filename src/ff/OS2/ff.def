@@ -1,0 +1,7 @@
+;-------------------------------------
+; FF.DEF module definition file
+;-------------------------------------
+
+NAME           FileFind  WINDOWCOMPAT
+DESCRIPTION    'FileFind (c) Patrick Haller'
+PROTMODE

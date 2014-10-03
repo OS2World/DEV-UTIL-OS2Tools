@@ -1,0 +1,14 @@
+;-------------------------------------
+; SysCtl.DEF module definition file
+;-------------------------------------
+
+NAME           SysCtl  WINDOWCOMPAT
+DESCRIPTION    'SysCtl (c) Patrick Haller'
+PROTMODE
+
+IMPORTS
+  _Dos32SysCtl           =DOSCALLS.876
+   Dos32SysCtl           =DOSCALLS.876
+  _DosSysCtl             =DOSCALLS.876
+   DosSysCtl             =DOSCALLS.876
+

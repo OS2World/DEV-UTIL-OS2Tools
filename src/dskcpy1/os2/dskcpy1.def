@@ -1,0 +1,7 @@
+;-------------------------------------
+; DiskCopy.DEF module definition file
+;-------------------------------------
+
+NAME           DiskCopy  WINDOWCOMPAT
+DESCRIPTION    'DiskCopy (c) Patrick Haller'
+PROTMODE

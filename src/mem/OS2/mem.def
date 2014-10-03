@@ -1,0 +1,7 @@
+;-------------------------------------
+; MEM.DEF module definition file
+;-------------------------------------
+
+NAME           Mem  WINDOWCOMPAT
+DESCRIPTION    'Memory (c) Patrick Haller'
+PROTMODE

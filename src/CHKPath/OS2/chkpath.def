@@ -1,0 +1,7 @@
+;-------------------------------------
+; CHKPATH.DEF module definition file
+;-------------------------------------
+
+NAME           CHKPATH  WINDOWCOMPAT
+DESCRIPTION    'CheckPath (c) Patrick Haller'
+PROTMODE

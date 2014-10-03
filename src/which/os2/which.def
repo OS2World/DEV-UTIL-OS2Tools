@@ -1,0 +1,7 @@
+;---------------------------------
+; Which.DEF module definition file
+;---------------------------------
+
+NAME           Which  WINDOWCOMPAT
+DESCRIPTION    'Which (c) Patrick Haller'
+PROTMODE

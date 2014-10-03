@@ -1,0 +1,7 @@
+;-------------------------------------
+; UNIQ.DEF module definition file
+;-------------------------------------
+
+NAME           UNIQ  WINDOWCOMPAT
+DESCRIPTION    'Unique (c) Patrick Haller'
+PROTMODE

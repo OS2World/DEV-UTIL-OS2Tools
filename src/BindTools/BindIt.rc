@@ -1,0 +1,15 @@
+/* $Id: BindIt.rc,v 1.5 2001/06/10 19:58:21 bird Exp $
+ *
+ * Resource file which includes the bind files for the bindit program.
+ *
+ * Copyright (c) 2001 knut st. osmundsen (knut.stange.osmundsen@mynd.no)
+ *
+ * GPL.
+ *
+ */
+
+RESOURCE 805    1 Q21DB2_1.bnd
+RESOURCE 805    2 Q61MVS_1.bnd
+RESOURCE 805    3 Q71UDB_1.bnd
+
+

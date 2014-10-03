@@ -1,0 +1,7 @@
+;-------------------------------------
+; DIC.DEF module definition file
+;-------------------------------------
+
+NAME           DIC  WINDOWCOMPAT
+DESCRIPTION    'DIC (c) Patrick Haller'
+PROTMODE

@@ -1,0 +1,7 @@
+;-------------------------------------
+; DU.DEF module definition file
+;-------------------------------------
+
+NAME           DU  WINDOWCOMPAT
+DESCRIPTION    'DiskUsage (c) Patrick Haller'
+PROTMODE

@@ -1,0 +1,7 @@
+;-------------------------------------
+; UDPCLIENT.DEF module definition file
+;-------------------------------------
+
+NAME           UDPCLIENT WINDOWCOMPAT
+DESCRIPTION    'UDP-Client (c) Patrick Haller'
+PROTMODE

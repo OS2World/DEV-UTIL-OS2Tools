@@ -1,0 +1,7 @@
+;-------------------------------------
+; Sym2Ida.DEF module definition file
+;-------------------------------------
+
+NAME           Sym2Ida  WINDOWCOMPAT
+DESCRIPTION    'Sym2Ida (c) Patrick Haller'
+PROTMODE

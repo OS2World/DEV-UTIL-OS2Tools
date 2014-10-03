@@ -1,0 +1,4 @@
+; $Id: CmdQd.def,v 1.1 2001/08/09 01:31:41 bird Exp $
+NAME CmdQd.def WINDOWCOMPAT
+DESCRIPTION "Command Queue Daemon/Client."
+

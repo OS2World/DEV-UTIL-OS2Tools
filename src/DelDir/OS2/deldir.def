@@ -1,0 +1,7 @@
+;-------------------------------------
+; DELDIR.DEF module definition file
+;-------------------------------------
+
+NAME           DELDIR  WINDOWCOMPAT
+DESCRIPTION    'DelDir (c) Patrick Haller'
+PROTMODE

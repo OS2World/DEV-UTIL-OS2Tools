@@ -1,0 +1,7 @@
+;-------------------------------------
+; TestMem.DEF module definition file
+;-------------------------------------
+
+NAME           TestMem  WINDOWCOMPAT
+DESCRIPTION    'TestMem (c) Patrick Haller Systemtechnik'
+PROTMODE

@@ -1,0 +1,7 @@
+;------------------------------------
+; IOStream.DEF module definition file
+;------------------------------------
+
+NAME           IOStream WINDOWCOMPAT
+DESCRIPTION    'IOStream (c) Patrick Haller'
+PROTMODE

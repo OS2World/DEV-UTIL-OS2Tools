@@ -1,0 +1,7 @@
+;-------------------------------------
+; Wont.DEF module definition file
+;-------------------------------------
+
+NAME           Wont WINDOWCOMPAT
+DESCRIPTION    'Wont (c) Patrick Haller'
+PROTMODE

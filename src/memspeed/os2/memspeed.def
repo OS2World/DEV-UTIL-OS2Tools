@@ -1,0 +1,7 @@
+;-------------------------------------
+; MemSpeed.DEF module definition file
+;-------------------------------------
+
+NAME           MemSpeed  WINDOWCOMPAT
+DESCRIPTION    'MemSpeed (c) Patrick Haller'
+PROTMODE

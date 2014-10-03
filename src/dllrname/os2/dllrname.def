@@ -1,0 +1,8 @@
+;-------------------------------------
+; DLLRNAME.DEF module definition file
+;-------------------------------------
+
+NAME           DLLRNAME  WINDOWCOMPAT
+DESCRIPTION    'DLLRAME (c) Patrick Haller'
+PROTMODE
+EXETYPE OS2

@@ -1,0 +1,433 @@
+ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+³ Kommentargenerator/2 ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+  P R E - R E L E A S E     D.h. ich bin noch nicht ganz fertig ... :)
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+Version 0.90 Deutsch                 (c) 1992-94 Patrick Haller Systemtechnik
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+	Entwickelt von Patrick Haller
+
+        unter Borland C++ fr OS/2 v1.01
+        und OS/2 2.11
+
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+Lauff„higkeit
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+Das Programm Kommentargenerator ist unter IBM OS/2 2.x (oder besser) uneinge-
+schr„nkt lauff„hig. Da bestimmte Funktionen dieser Betriebssystemumgebungen
+genutzt werden, kann die Benutzbarkeit des Kommentargenerators unter anderen
+Betriebssystemumgebungen stark eingeschr„nkt sein.
+
+Der Betrieb kann von Festplatte oder Diskettenlaufwerk o.„. aus laufen.
+
+Das Programm ben”tigt nur wenig freien Speicher (ca. 100 kB RAM) w„hrend des 
+Betriebes. Daher l„uft es auch auf OS/2 Mindestkonfigurationen.
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+Index
+
+		Vorlagen
+			Erstellen neuer Vorlagen
+			Bearbeiten
+			Vorlagedateien
+		Kopieren
+			Datenfelder fr die Vorlage
+			Aktuelles Datum und aktuelle Zeit
+		Kommentare
+			Kommentare im Quellcode
+			Bearbeiten
+		Mens
+			Datei
+				Neu
+				™ffnen
+				Speichern
+				Speichern unter
+				Beenden
+			Bearbeiten
+				Kommentar
+				Vorlage
+		
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+Erstellen neuer Vorlagen
+
+
+Direkt nach dem Programmstart oder nachdem Sie den Menpunkt DATEI, NEU 
+ausgew„hlt haben, befindet sich keine Vorlage in Bearbeitung. Daher kann 
+das Programm keine Daten in die Zwischenablage kopieren, von wo aus Sie 
+die Daten normalerweise weiterverarbeiten k”nnen.
+
+M”chten Sie eine alte Vorlage verwerfen und eine neue Vorlage erstellen, 
+w„hlen Sie den Menpunkt DATEI, NEU aus, um das Programm fr eine neue 
+Vorlage bereit zu machen. Sie bekommen dabei die Chance, eventuelle 
+nderungen der vorherigen Vorlage abzuspeichern, falls Sie dieses 
+versehentlich vergessen haben sollten.
+
+Die neue Vorlage k”nnen Sie dann editieren. Dazu w„hlen Sie den Menpunkt 
+BEARBEITEN, VORLAGE aus, um in den Vorlageneditor zu gelangen.
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+Vorlagedatei ”ffnen
+
+
+Sie k”nnen eine bestehende Vorlagendatei ”ffnen, indem Sie den Menpunkt 
+DATEI, ™FFNEN ausw„hlen. Die gew„hlte Vorlagedatei wird dann in den Speicher 
+geladen. 
+
+Zum Bearbeiten w„hlen Sie den Menpunkt BEARBEITEN, VORLAGE aus, um in den 
+Vorlageneditor zu gelangen. Dort k”nnen Sie die geladene Vorlage bearbeiten 
+und nach Ihren Wnschen gestalten.
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+Vorlagedatei speichern
+
+
+Zum Speichern der im Speicher befindlichen Vorlagendatei w„hlen Sie den 
+Menpunkt DATEI, SPEICHERN oder DATEI, SPEICHERN UNTER (falls Sie der Datei 
+noch keinen Namen gegeben haben oder einen anderen Namen geben wollen) aus.
+
+Bestehende Dateien werden ohne Rckfrage berschrieben.
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+Beenden des Programms
+
+
+Durch Auswahl des Menpunktes DATEI, BEENDEN k”nnen Sie die Arbeit mit dem
+Kommentargenerator beenden. Sie bekommen dabei die Chance, eventuelle 
+nderungen der aktuellen Vorlage abzuspeichern, falls Sie dieses 
+versehentlich vergessen haben sollten.
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+Bearbeiten des Kommentareintrages
+
+
+Zum Bearbeiten des Kommentareintrages w„hlen Sie den Menpunkt BEARBEITEN, 
+KOMMENTAR aus. 
+
+In dem erschienen Dialog k”nnen Sie die einzelnen Datenfelder ausfllen. Zum 
+Kopieren der Daten in die Zwischenablage bet„tigen Sie den Schalter KOPIEREN. 
+Aus der Zwischenablage k”nnen Sie dann die Daten in den Editor Ihrer 
+Entwicklungsumgebung einfgen. Dazu w„hlen Sie in diesem Editorprogramm 
+entweder den entsprechenden Menpunkt aus oder bet„tigen Sie die Tasten 
+SHIFT und EINFG gleichzeitig.
+
+Durch Bet„tigen des Schalters NEU werden alle Datenfelder bis auf AUTOR und 
+DATUM gel”scht. Das DATUM-Datenfeld wird aktualisiert. Datum und Uhrzeit 
+wird auch beim Bet„tigen des Schalters AKT aktualisiert.
+
+Durch Bet„tigen des Schalters ABBRECHEN kehren Sie in das Hauptmen zurck.
+
+Durch Bet„tigen des Schalters HILFE gelangen Sie in dieses Hilfesystem.
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+Bearbeiten von Vorlagen
+
+
+Durch Auswahl des Menpunktes BEARBEITEN, VORLAGE gelangen Sie in den 
+Vorlageneditor. Dieser reagiert nach dem SAA-Standard (also wie vom
+Presentation Manager gewohnt), untersttzt Kopieren, Ausschneiden (per
+Hotkeys), etc.
+
+Das zentrale Element dieses Dialoges bildet ein kleiner Editor, in welchem 
+Sie die Vorlage als normalen Text bearbeiten k”nnen. Alle Zeichen sind 
+erlaubt, die Datenfelder, welche sp„ter durch Ihre im Kommentardialog 
+eingegebenen Daten ersetzt werden, stehen in eckigen Klammern: 
+z.B.[NAME].
+
+Diese Zeichenfolge wird beim Kopieren in die Zwischenablage durch Ihre 
+eingegebenen Daten ersetzt. Sie k”nnen durchaus dasselbe Datenfeld mehrmals 
+verwenden, falls dies erforderlich ist.
+
+Die Schalterleiste oben am Dialog dient der schnelleren und bequemeren 
+Bedienung. Klicken Sie auf einen dieser Schalter oder bet„tigen Sie die 
+ALT-Taste und den, auf dem entsprechenden Schalter, unterstrichenen 
+Buchstaben gleichzeitig (z.B. ALT-N fr Name), so wird das Krzel fr das 
+Datenfeld automatisch in den Text der Vorlagendatei eingefgt.
+
+
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+Beispiel fr eine Vorlage:
+
+{*******************************************************************
+ * Vorlage fr Pascal-Programme
+ * mit dem Kommentargenerator 1.05 erstellt.
+ *
+ * Name      : [TYP] [NAME]
+ * Funktion  : [FUNKTION]
+ * Parameter : [PARAMETER]
+ * Variablen : [VARIABLEN]
+ * Ergebnis  : [ERGEBNIS]
+ * Bemerkung : [BEMERKUNG]
+ *
+ * [AUTOR] [[DATUM]]
+ *******************************************************************}
+
+Wird der Schalter ABBRECHEN bet„tigt, so werden die gemachten nderungen 
+ignoriert. Beim Bet„tigen des OK-Schalters werden die nderungen in der 
+Vorlage bernommen.
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+Vorlagedateien und Datenfelder
+
+
+Eine Vorlagedatei ist eine ASCII-Textdatei. Sie tr„gt normalerweise die 
+Endung *.KGV. Im Kommentargenerator lassen sich alle Arten von Textdateien 
+zur Umwandlung in KGVs nutzen. z.B. k”nnen Sie aus vorhandenen Quellcode-
+dateien Ihre Kommentarvorlagen herausziehen.
+
+Die Kommentarvorlagen lassen sich auch mit jedem beliebigen Editorprogramm 
+bearbeiten. Lediglich die Datenfelder mssen Ihre Kürzel tragen: z.B. fr das 
+Datenfeld AUTOR sieht das Krzel so aus: [AUTOR]. 
+Es gibt folgende Datenfelder: NAME, TYP, FUNKTION, PARAMETER, VARIABLEN, 
+			      ERGEBNIS, BEMERKUNG, AUTOR, DATUM.
+
+NAME            Name der Funktion, Prozedur, ...
+TYP             Function, Procedure, Structure...
+FUNKTION        Aufgabe der Funktion
+PARAMETER       Welche Parameter werden der Funktion bergeben
+VARIABLEN       Welche Variablen ben”tigt oder ver„ndert die Funktion
+ERGEBNIS        Welches Ergebnis gibt die Funktion zurck 
+		und was hat es zu bedeuten
+BEMERKUNG       zur freien Verfgung
+AUTOR           Autor der Funktion
+DATUM           aktuelles Datum und aktuelle Zeit
+
+Die Datei sollte nicht l„nger als 64 Kilobyte sein. L„ngere Dateien werden
+abgeschnitten.
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+Aktuelles Datum und aktuelle Zeit
+
+
+Im Kommentardialog k”nnen Sie durch Bet„tigen der Schalter NEU und AKT die 
+aktuelle Zeit und das aktuelle Datum mit Wochentag in das DATUM-Datenfeld 
+eintragen lassen. Natrlich k”nnen Sie dieses Feld auch manuell nach Ihren 
+Bedrfnissen „ndern.
+
+Im Hauptfenster des Kommentargenerators l„uft eine Uhr mit Datum und 
+Wochentag st„ndig mit.
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+Kommentare im Quellcode
+
+
+Zur besseren šbersichtlichkeit werden Kommentare in den Quellcode eines 
+Programms eingetragen. Desweiteren kann man zu sp„teren Zeitpunkten sich 
+wieder leichter in den Quellcode des Programms einarbeiten oder hier 
+nderungen leichter vornehmen.
+
+Logischerweise sind diese Kommentare in soweit programmiersprachenabh„ngig, 
+als daá die entsprechenden Zeichenfolgen das Kommentar ”ffnen und schlieáen.
+
+z.B. 
+
+Pascal          {       Kommentar       }
+   oder         /*      Kommentar      */
+
+C               /*      Kommentar      */
+   oder         //      Kommentar
+
+BASIC           REM     Kommentar
+   oder         '       Kommentar
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+Shareware-Konzept
+
+
+Fr den Kommentargenerator gilt das Shareware-Konzept. Das
+bedeutet, die Shareware-Version dieses Programmes darf frei kopiert
+und ohne Verletzung von Urheberrechten weitergegeben werden.
+
+Es wird Ihnen somit die M”glichkeit gegeben, das Programm zu testen
+und auf Ihre Verwendungsm”glichkeit hin zu prfen. Sollten Sie
+das Programm unregistriert ber 30 Tage hinaus benutzen, so verletzen
+Sie Urheberrechte und machen Sich strafbar.
+
+Die Shareware-Version ist eine vollst„ndige Programmversion und
+keine Demo-Diskette. Lediglich Werbetexte, die in unregelm„áigen
+Abst„nden eingeblendet werden, sind in der Vollversion nicht mehr
+enthalten. Sollte Ihnen das Programm gefallen, so sollten Sie Sich
+beim Autoren registrieren lassen. Sie helfen dadurch mit, das
+Programm weiter zu entwickeln.
+
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+Registrierung hat Vorteile
+
+
+Fr eine Gebhr von 24,90 DM zzgl. Versandspesen k”nnen Sie sich registrieren
+lassen und erwerben mit dieser Registrierungsgebhr folgende
+Leistungen:
+
+- die neueste Programmversion (ohne Werbetexte, Shareware-
+  Titelscreen und Warteschleifen)
+
+- Informationen ber neue Programmentwicklungen
+
+Haben Sie diese Argumente berzeugt und sollten Sie noch keine
+registrierte Version besitzen, so beachten Sie bitte das
+Registrierungsformular auf der letzten Seite.
+
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+			    Rechtliche Hinweise
+	     Kommentargenerator steht unter dem Urheberrechtsschutz.
+                Copyright (c) 1992-94 Patrick Haller Systemtechnik
+			  Alle Rechte vorbehalten
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+		  Lizenzbedingungen fr die registrierte Version
+
+1. Der Lizenznehmer erwirbt eine unbefristete, nicht ausschlieáliche
+   und nicht bertragbare Nutzungslizenz auf einem Computer des
+   Lizenznehmers fr das Programm
+
+   Kommentargenerator
+
+   Sie k”nnen dieses Programm auf jeden Computer einsetzen, solange nur
+   eine einzige Person sie zu einem gegebenen Zeitpunkt benutzt.
+   Benutzen mehrere Personen dieses Programm gleichzeitig, mssen Sie
+   eine zus„tzliche Lizenzgebhr (Registrierungsgebhr) entrichten.
+
+2. Der Lizenzgeber schlieát jede Haftung fr Sch„den jeglicher Art aus.
+   Auch wenn Sch„den aufgrund Programmfehlern, Bedienungsfehlern oder
+   sonstiger Ursache entstehen sollten, so ist der Lizenzgeber in keiner
+   Beziehung fr die Sch„der verantwortlich und haftbar zu machen.
+
+3. Der Lizenznehmer erwirbt das Recht, die Nutzungslizenz fr eine
+   evtl. erweiterte oder verbesserte Version des Programmes im Rahmen
+   eines UPDATE-Service durch den Lizenzgeber zu erwerben. Zum Umfang
+   des UPDATE-Service geh”rt eine oder mehrere Disketten mit der neuen
+   Version des Programmes und eine Loseblattsammlung, in denen die
+   nderungen beschrieben und erl„utert werden. Ein Update kann nur von
+   Kunden erworben werden, die bereits eine registrierte Version
+   besitzen.
+
+
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+		   Lizenzbedingungen fr die Shareware-Version
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+1. Die Shareware-Version des Programmes Kommentargenerator, darf nur
+   umsonst oder gegen einen Unkostenbeitrag (Kosten fr Material und
+   Dienstleistung) von maximal 18 DM angeboten werden. Wird das Programm
+   komerziell weitergegeben, so besteht der Autor darauf, einmalig benach-
+   richtigt zu werden, von wem das Programm weitergegeben wird.
+
+2. Die Evaluationszeit/Prfungszeit betr„gt 30 Tage. Solange darf das
+   Programm zu Testzwecken benutzt werden. Nach Ablauf dieser 30 Tage
+   ist das Programm mit allen zugeh”rigen Dateien zu l”schen. Sollte
+   das Programm dennoch widerrechtlich weiterhin in Gebrauch sein, so
+   ist dies mit der Benutzung einer RAUBKOPIE gleichzusetzen, entsprechende
+   rechtliche Schritte halte ich mir fr diesen Fall offen. Doch
+   angesichts des „uáerst gnstigen Preises der Software drfte sich
+   jeder darber im Klaren sein, daá der Kauf der Software in jedem
+   Falle der bessere Weg ist.
+
+3. Die Programmdiskette, sowie die darauf befindlichen Dateien, drfen
+   in keiner Weise ver„ndert oder gel”scht werden.
+
+   Der Lizenznehmer hat sich durch den Kauf des Programmes mit diesen
+   Bedingungen einverstanden erkl„rt.
+       
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+Bedienungsfehler und Bugs
+
+
+Kommentargenerator wurde grndlich getestet und wird bereits seit
+l„ngerem von mir eingesetzt. Angesichts der zahlreichen Funktionen
+lassen sich Laufzeitfehler (BUGS) leider nie ausschlieáen. Sollte
+also bei der Arbeit mit Kommentargenerator trotz korrekter Bedienung, ein
+Fehler auftreten, so bitte ich Sie, an die unten angegebene Adresse
+eine m”glichst genaue Fehlerbeschreibung mit den angezeigten
+Protokollmeldungen zu senden. Falls der Fehler nur bei bestimmten
+Textdateien auftritt, sollten Sie einen Ausdruck, besser noch eine
+Diskette, mit der Arbeitsdatei beilegen.
+Bitte haben Sie Verst„ndnis, daá nur bei gravierenden Fehlern ein
+Ersatz geliefert werden kann. Trotzdem bin ich auch fr
+Hinweise auf kleinere Fehler dankbar, denn nur so k”nnen diese
+Fehler in einem Update korrigiert werden. Ebenfalls sind
+Verbesserungsvorschl„ge, aber auch Kritik immer willkommen.
+       
+Leider ist es mir bei der enormen Anzahl der Zuschriften nicht immer
+m”glich alle Zuschriften ausfhrlich zu beantworten, ich hoffe es
+liegt im Interesse der Anwender, daá ich die verfgbare Zeit
+vorwiegend fr Verbesserungen am Programm nutze.
+			
+
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+			 BESTELLUNG/REGISTRIERUNG
+ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+
+
+      Patrick Haller 
+      Systemtechnik
+      Postfach 49
+
+      88095 Eriskirch am Bodensee
+
+
+
+  Hiermit bestelle ich die Vollversion des Kommentargenerators zum
+  gnstigen Preis von nur DM 24,90 zzgl. Versandkosten.
+  Ich bin mit den Bedingungen einverstanden und weiá,
+  daá dieses Programm unter OS/2 2.x lauff„hig ist.
+
+
+  [] Die Bezahlung erfolgt durch den beiliegenden Verrechnungs-
+     scheck (keine Versandkosten, schnellste Lieferung)
+     (zzgl. Versandkosten DM 8.-)
+
+  Ich ben”tige [] 5 1/4 Zoll / [] 3 1/2 Zoll Disketten
+
+
+  Ich habe die Shareware-Version erhalten von: ________________
+
+  _____________________________________________________________
+
+
+  Meine Anschrift: _____________________________________________
+
+  ______________________________________________________________
+
+  ______________________________________________________________
+
+  ______________________________________________________________
+
+
+
+  Anregungen und Verbesserungsvorschl„ge________________________
+
+  ______________________________________________________________
+
+  ______________________________________________________________
+
+  ______________________________________________________________
+
+  ______________________________________________________________
+
+
+  Datum: ______________  Unterschrift: _________________________

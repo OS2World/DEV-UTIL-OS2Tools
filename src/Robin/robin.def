@@ -1,0 +1,8 @@
+;-------------------------------------
+; ROBIN.DEF module definition file
+;-------------------------------------
+
+NAME           ROBIN  WINDOWCOMPAT
+DESCRIPTION    'Robin (c) 2000-2001 Patrick Haller <patrick.haller@innotek.de>'
+PROTMODE
+

@@ -1,0 +1,7 @@
+;-------------------------------------
+; DF.DEF module definition file
+;-------------------------------------
+
+NAME           DF  WINDOWCOMPAT
+DESCRIPTION    'DiskFree (c) Patrick Haller'
+PROTMODE

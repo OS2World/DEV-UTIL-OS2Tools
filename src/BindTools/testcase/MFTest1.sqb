@@ -1,0 +1,29 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. 'MFTEST01'.
+
+       ENVIRONMENT DIVISION.
+       CONFIGURATION SECTION.
+
+       DATA DIVISION.
+      *@WorkingStorage*************************************************
+       WORKING-STORAGE SECTION.
+       01  WS-MFTEST01-PGM                 PIC X(50)  VALUE
+                            'WORKING STORAGE FOR MFTEST01 STARTS HERE'.
+      *@Includebooks***************************************************
+      *     EXEC SQL INCLUDE SQLCA         END-EXEC.
+      *****************************************************************
+       01  WS-MFTEST01-E                   PIC X(50) VALUE
+                              'WORKING STORAGE FOR MFTEST01 ENDS HERE'.
+      *@Procedure******************************************************
+       PROCEDURE DIVISION.
+
+      *@Section********************************************************
+      * A0000-MAIN-LINE                                               *
+      * The main flow of the progam.                                  *
+      *****************************************************************
+       A0000-MAIN-LINE SECTION.
+           DISPLAY 'HELLO WORLD - MFTEST01'
+      *     EXEC SQL CONNECT TO DATABASE END-EXEC
+             .
+       A0000-MAIN-LINE-EXIT.
+             EXIT.

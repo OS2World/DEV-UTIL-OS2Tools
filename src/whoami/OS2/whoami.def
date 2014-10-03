@@ -1,0 +1,7 @@
+;-------------------------------------
+; WHOAMI.DEF module definition file
+;-------------------------------------
+
+NAME           WHOAMI  WINDOWCOMPAT
+DESCRIPTION    'Who-Am-I (c) Patrick Haller'
+PROTMODE

@@ -1,0 +1,8 @@
+;$Id: rm.def,v 1.3 2002/08/23 03:29:29 bird Exp $
+NAME rm WINDOWCOMPAT
+DESCRIPTION "mini rm clone for the buildsystem"
+;STUB NONE
+
+SEGMENTS
+        BUFFER64K class '' ALIAS READWRITE
+

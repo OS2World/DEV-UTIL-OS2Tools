@@ -1,0 +1,7 @@
+;-------------------------------------
+; Tree.DEF module definition file
+;-------------------------------------
+
+NAME           Tree WINDOWCOMPAT
+DESCRIPTION    'Tree (c) Patrick Haller'
+PROTMODE

@@ -1,0 +1,13 @@
+;-------------------------------------
+; REPLMOD.DEF module definition file
+;-------------------------------------
+
+NAME           Replmod WINDOWCOMPAT
+DESCRIPTION    'ReplaceModule (c) Patrick Haller'
+PROTMODE
+
+IMPORTS
+   DOSREPLACEMODULE            =  DOSCALLS.417
+   Dos32QueryModFromEIP        =  DOSCALLS.360
+   DosQueryModFromEIP          =  DOSCALLS.360
+   DOS16QUERYMODFROMCS         =  DOSCALLS.359

@@ -1,0 +1,29 @@
+;-------------------------------------
+; Registry.DEF module definition file
+;-------------------------------------
+
+NAME           Registry  WINDOWCOMPAT
+DESCRIPTION    'Registry (c) Patrick Haller'
+PROTMODE
+
+IMPORTS
+; IBM OS/2 Warp Registry 
+; ASCII-version of functions only
+
+  RegOpenKey            =REGISTRY.RegOpenKeyA
+  RegEnumKey            =REGISTRY.RegEnumKeyA
+  RegCloseKey           =REGISTRY.RegCloseKey
+  RegCreateKey          =REGISTRY.RegCreateKey
+  RegFlushKey           =REGISTRY.RegFlushKey
+  RegSetValue           =REGISTRY.RegSetValueA
+  RegDeleteKey          =REGISTRY.RegDeleteKeyA
+  RegOpenKeyEx          =REGISTRY.RegOpenKeyExA
+  RegEnumKeyEx          =REGISTRY.RegEnumKeyExA
+  RegEnumValue          =REGISTRY.RegEnumValueA
+  RegQueryValue         =REGISTRY.RegQueryValueA
+  RegSetValueEx         =REGISTRY.RegSetValueExA
+  RegDeleteValue        =REGISTRY.RegDeleteValueA
+  RegCreateKeyEx        =REGISTRY.RegCreateKeyExA
+  RegQueryInfoKey       =REGISTRY.RegQueryInfoKeyA
+  RegQueryValueEx       =REGISTRY.RegQueryValueExA
+

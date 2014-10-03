@@ -1,0 +1,141 @@
+<!-- WarpIn installation profile for OS2TOOLS. -->
+
+<WARPIN>
+
+<!-- Every .WPI archive contains one or more packages. -->
+
+<HEAD>
+<PCK INDEX=1
+     PACKAGEID="Patrick Haller\Community\OS/2 Tools\1\0"
+     TARGET="$(WARPIN_DEFAULTTOOLSPATH)\Bin"
+     TITLE="OS/2 Tools"
+     CREATEOBJECT="WPFolder|OS/2 Tools|<WP_DESKTOP>|OBJECTID=<OS2TOOLS_FOLDER>"
+     CREATEOBJECT="WPProgram|Mahjongg|<OS2TOOLS_FOLDER>|EXENAME=$(1)\cdrom.exe;OBJECTID=<OS2TOOLS_EXE_CDROM>"
+     SELECT
+     >This package contains the OS/2 Tools and Utilities.</PCK>
+</HEAD>
+
+<BODY>
+
+<PAGE INDEX=1 TYPE=TEXT>
+<NEXTBUTTON TARGET=2>~Next</NEXTBUTTON>
+<TEXT>
+
+
+Welcome!
+
+This archive contains the OS/2 Tools and Utilities.
+It is a collection of tools that have been developed during
+the past years and kept improving from time to time.
+
+In the package you will find handy command line utilities as well as some
+experimental code that was developed to examine undocumented and hidden
+features of OS/2.
+
+Source code is available from the Netlabs CVS server.
+
+Select "Next" to continue.
+
+Select "Cancel" to abort installation.</TEXT>
+</PAGE>
+
+
+<PAGE INDEX=2 TYPE=README>
+<NEXTBUTTON TARGET=3>~I agree</NEXTBUTTON>
+<TEXT>
+By pressing the "I agree" button, you agree to all terms and conditions to the below licence agreement.
+</TEXT>
+<README>
+Project OS2TOOLS Software License
+
+You may, without charge, royalty, or other payment, copy and
+distribute copies of this work in source or binary form
+provided that:
+(1) you appropriately publish on each copy an appropriate
+copyright notice; (2) faithfully reproduce all prior copyright
+included in the original work; and (3) agree to indemnify and
+hold all prior authors, copyright holders and licensors of the
+work harmless from and against all damages arising from use of
+or the inability to use the work.
+
+You may not use the work as base of another work without explicit
+authorisation by the author. You are encouraged to make changes to 
+this work but you have to submit all changes back to the work and 
+only use them if they become part of the work. If you have the need to
+create a derivative work you may contact the project management 
+team and a special arrangement can be done.
+
+This work is free for non-commercial usage.
+
+These license terms can be amended by a custom license
+agreement between a third party and the administration
+team. Such a custom license might only limit the above terms
+if the changes cause a direct advantage for the functionality
+or completeness of the product and do not interfere with the
+goal of an open-source and free emulation product.
+
+Parts of the work may be governed by a license other than
+this one, if the source directory of the part contains a
+license file called "LICENSE.TXT" of its own. If a different
+license exists, it supercedes this license. Removing the
+the part specific license will automatically put back the
+part under the terms of this license. Only the project management
+team is allowed to put parts of the work under a different
+license and remove the part specific licenses. The purpose
+of using different licenses is solely for allowing code
+sharing of certain parts of the work with other projects that
+have incompatible licenses. These parts should either have
+this license in a version that makes it compatible with the
+license of the second project, or the license of the second
+project as long as it conforms to the goals of an open source
+and free emulation software.
+
+Warranty
+
+EXCEPT AS OTHERWISE RESTRICTED BY LAW, THIS WORK IS PROVIDED
+WITHOUT ANY EXPRESSED OR IMPLIED WARRANTIES OF ANY KIND, INCLUDING
+BUT NOT LIMITED TO, ANY IMPLIED WARRANTIES OF FITNESS FOR A
+PARTICULAR PURPOSE, MERCHANTABILITY OR TITLE.  EXCEPT AS
+OTHERWISE PROVIDED BY LAW, NO AUTHOR, COPYRIGHT HOLDER OR
+LICENSOR SHALL BE LIABLE TO YOU FOR DAMAGES OF ANY KIND, EVEN IF 
+THEY HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+Project management team
+
+Patrick Haller (patrick.haller@haller-gmbh.de)
+
+
+2002/07/28
+
+</README>
+</PAGE>
+
+<PAGE INDEX=3 TYPE=CONTAINER>
+<NEXTBUTTON TARGET=4>~Next</NEXTBUTTON>
+<TEXT>
+Please select the packages which are to be installed. You may change the target paths for the packages.
+</TEXT>
+</PAGE>
+
+
+<PAGE INDEX=4 TYPE=CONFIGURE>
+<NEXTBUTTON TARGET=5>~Next</NEXTBUTTON>
+<TEXT>
+
+Please select additional configuration that WarpIN should perform after installing this archive.
+
+</TEXT>
+</PAGE>
+
+
+<PAGE INDEX=5 TYPE=TEXT>
+<NEXTBUTTON TARGET=0>I~nstall</NEXTBUTTON>
+<TEXT>
+
+
+
+Press "Install" to begin installing this archive.</TEXT>
+</PAGE>
+</BODY>
+</WARPIN>
+

@@ -1,0 +1,80 @@
+To Do:
+
+* parser engine
+  - read from input streams (stdin / telnet / ssh / redirection)
+  - handle history / completion
+  - parse the retrieved command line
+    and issue it to the command dispatcher
+  - handle keyboard signals and hotkeys
+* output stream handler
+  - send output to error / stdout / telnet / ssh / redirection streams
+  - handle redirections
+* command dispatcher
+  - split internal tokens and command tokens
+  - setup and monitor threads as required
+  - call appropriate command handlers
+  - call callouts / hooks (rexx / plugins)
+* several commands
+  - ALIAS
+  - BEEP
+  - VOL
+  - LABEL
+  - FORMAT
+  - DIR
+  - DEL
+  - START
+  - DETACH
+  - ECHO
+  - FOR ... DO
+  - HELP
+  - COPY
+  - MORE (built-in)
+  - IF
+  - GOTO
+  - SET 
+    (probably EXPORT to shared environment)
+    Environment variables editor
+  - CD
+  - CLS
+  - COMP
+  - DATE
+  - TIME
+  - SETLOCAL
+  - ENDLOCAL
+  - PATH
+  - PROMPT
+  - REM
+  - REN
+  - MOVE
+  - RUN
+  - SHIFT
+  - VER
+  - VERIFY
+  - TYPE (build-in pager)
+  - PUSH
+  - POP
+* shell environment (break handler, exception handler, etc.)
+
+* WPS integration (open objects)
+
+* execution handlers
+  - native executables
+  - batch / rexx
+  - registered file associations via WPS
+  - PE / Java / bash / etc.
+
+* job management
+  - detached, asynchronous jobs
+  - foreground / background switching
+
+* screen saver / idle logout (termination)
+
+* internal wildcard expansion service for commands
+* internal environment variable expansion service
+* directory stack
+* don't depend on a specific C runtime, try to avoid it completely
+  to have only minimal static dependencies for the shell
+  => ROBIN shall be as much self-contained as possible. We don't really want
+     to depend on any other external module than the OS/2 Kernel and basic
+     subsystems, so ROBIN can easily be run from an OS/2 boot floppy :)
+* rexx hooks (i. e. completion hook) and macro functions

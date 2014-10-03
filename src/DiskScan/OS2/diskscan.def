@@ -1,0 +1,7 @@
+;-------------------------------------
+; DiskScan.DEF module definition file
+;-------------------------------------
+
+NAME           DiskScan  WINDOWCOMPAT
+DESCRIPTION    'DiskScan (c) Patrick Haller'
+PROTMODE

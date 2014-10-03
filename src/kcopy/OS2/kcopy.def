@@ -1,0 +1,6 @@
+;$Id: kcopy.def,v 1.1 2002/09/19 05:10:13 bird Exp $
+NAME kCopy WINDOWCOMPAT
+DESCRIPTION "kCopy - funny little file copying program."
+;STUB NONE
+
+

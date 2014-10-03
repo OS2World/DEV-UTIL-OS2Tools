@@ -1,0 +1,180 @@
+/* $Id: make.txt,v 1.1 2001/05/16 03:00:50 bird Exp $ */
+
+
+1.0 Build Environment Description
+----------------------------------
+
+This short document will describe the essentials of the build environment
+created and used by OS2Tools with the purpose of aiding you in implementing
+it of another project. This build environment has successfully been used
+to build PHP.
+
+
+1.1 Tools Requirements
+-----------------------
+
+This is based on NMAKE. It will hopefully be compatible with most NMAKE
+versions from IBM and MicroSoft. (I've successfully used NMAKE v2.0
+for OS/2 build OS2Tools..) Sorrily NMAKE v5.0 for OS/2 isn't working
+very well, so currently the environment don't work with it.
+
+
+2.0 Configuring your project
+-----------------------------
+
+There are a some macros you might have to change in setup.mak and
+process.mak. (You might have to tweek the compiler setup.-files too
+but try find other ways to do and only change them as last resort.)
+
+
+2.1 process.mak
+----------------
+
+TARGET_LIBS=
+The default libraries are certainly something you'll like to change.
+If you don't set TARGET_LIBS a makefile, TARGET_LIBS is assigned default
+libraries in process.mak.
+
+PATH_TARGET=
+What is the target path. (Don't be fooled into thinking this is the full
+path target. It's only it's path!). This is something you might have to
+change. (At least I did for PHP...)
+(BTW. this don't belong in process.mak does it???)
+
+TARGET_*=
+There are other default assignements to the TARGET_* variables but I don't
+think you'll need to change them. TARGET_DET you will mostly likely manage to
+change by using PATH_DEF=. in setup.mak if you don't have subdirectories for
+the definition files.
+(See "Setting Up a Makefile" for further description of the TARGET_* macros.)
+
+
+2.2 setup.mak
+--------------
+
+The macros you'll need to change here is most likely the PATH_* macros. These
+macros defines a path used in the build system. I will describe the ones you're
+like to change here.
+
+PATH_MAKE=
+Directory where all the build environemnt makefile are placed.
+
+PATH_TOOLS=
+Directory where all the build environment tools are placed.
+
+PATH_INCLUDE=$(PATH_ROOT)\include
+Project global include directory. This is by default included by all compilers
+and assemblers. It's the first directory to be searched.
+
+PATH_BIN=
+Install directory for EXEs.
+
+PATH_LIB=
+Project global directory for libraries. That directory should contain libraries
+made in the project for the project. If you are using multiple compilers and
+linkers, you should make that directory compiler unique.
+
+PATH_DLL=
+Install directory for DLLs.
+
+PATH_OBJ=
+The base path for output files generated. This is by default compiler unique.
+It's used by PATH_TARGET and created when invoking the makefile. To use the
+current directory assign '.' to this macro and change PATH_TARGET to '.' too.
+
+PATH_DEF=
+The path where linker definition files are found. Used only by the default
+assignment of TARGET_DEF (in process.mak). It's relative to the current
+directory (MAKEDIR). If you have definition files in the same directory as
+the source, use:
+PATH_DEF=.
+
+
+
+3.0 Setting Up a Makefile
+--------------------------
+
+3.1 Multi Entry Macros
+-----------------------
+
+There are some general rules when listing multiple entries for a macro:
+ - The first entry is placed on the line following the "<macro name>=\".
+ - Entries are placed in column 1. No spaces before the entries.
+ - Only one entry per line.
+ - No space between the entry and the contiunation character ('\')
+   if possible.
+
+
+3.2 Common stuff
+-----------------
+
+There are a some mandatory stuff you need to define and include.
+Let's start with the macros you will have or often will define:
+
+PATH_ROOT=
+All makefiles must include a relative PATH_ROOT. (Or you might set
+PATH_ROOT as an environment variable...) PATH_ROOT is the top project
+directory which everything else is below.
+
+
+TARGET_NAME=
+The target output for this makefile without path and extension.
+A makefile can only have one target.
+
+TARGET_OBJS=\
+The object files needed to link the target. This is a multi entry macro.
+Use $(PATH_TARGET) as path for all the object files.
+Use $(EXT_OBJ) as extension for all the object files.
+If not defined, TARGET_OBJS is set to $(PATH_TARGET)\$(TARGET_NAME).$(EXT_OBJ)
+in process.mak.
+
+TARGET_LIBS=\
+The libraries needed to link the target. This is a multi entry macro.
+There are some common library definitions defined by the build env.:
+    - LIB_OS:           Common OS specific libraries.
+    - LIB_C_OBJ:        Compiler static object library.
+    - LIB_C_DLL:        Compiler DLL object library.
+    - LIB_C_RTDLL:      Compiler object library for use with custom RT lib.
+If not defined, it's defined default libraries in process.mak.
+
+
+
+
+
+
+3.3 Adding To Compiler Environment
+-----------------------------------
+
+Therer are a number of generic macros which is used by all the compilers which
+you may use the do generic compiler changes for a specific target.
+
+Defines:
+AS_DEFINES
+CC_DEFINES
+CXX_DEFINES
+
+Include path:
+C_INCLUDE
+AS_INCLUDE
+
+!TODO! finish this section.
+
+
+3.4 Less Frequent Stuff
+------------------------
+
+TARGET_MAP=
+Full name of the map file generated.
+Defaults to $(PATH_TARGET)\$(TARGET_NAME).map (process.mak).
+
+TARGET_DEF=
+Full name of the definition file.
+Defaults to $(MAKEDIR)\$(PATH_DEF)\$(TARGET_NAME).def (process.mak).
+
+!TODO! there are more stuff here...
+
+
+3.5 Example
+------------
+
+!TODO! make example makefile.

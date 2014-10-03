@@ -1,0 +1,5 @@
+; $Id: BindIt.def,v 1.1 2001/06/03 17:44:34 bird Exp $
+;
+NAME BindIt WINDOWCOMPAT
+DESCRIPTION "BindTools - BindIt! Copyright (c) knut st. osmundsen 2001."
+

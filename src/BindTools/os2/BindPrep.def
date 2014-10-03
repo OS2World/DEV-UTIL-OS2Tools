@@ -1,0 +1,5 @@
+; $Id: BindPrep.def,v 1.1 2001/06/16 22:52:26 bird Exp $
+;
+NAME DB2Prep WINDOWCOMPAT
+DESCRIPTION "BindTools - DB2Prep! Copyright (c) knut st. osmundsen 2001."
+

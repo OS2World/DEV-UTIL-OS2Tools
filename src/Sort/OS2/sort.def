@@ -1,0 +1,7 @@
+;-------------------------------------
+; SORT.DEF module definition file
+;-------------------------------------
+
+NAME           SORT  WINDOWCOMPAT
+DESCRIPTION    'Sort (c) Patrick Haller'
+PROTMODE

@@ -1,0 +1,7 @@
+;---------------------------------
+; Timex.DEF module definition file
+;---------------------------------
+
+NAME           Timex  WINDOWCOMPAT
+DESCRIPTION    'Timex (c) Patrick Haller'
+PROTMODE

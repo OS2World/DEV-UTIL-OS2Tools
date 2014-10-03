@@ -1,0 +1,7 @@
+;-------------------------------------
+; UserDel.DEF module definition file
+;-------------------------------------
+
+NAME           UserDel  WINDOWCOMPAT
+DESCRIPTION    'UserDel (c) Patrick Haller'
+PROTMODE

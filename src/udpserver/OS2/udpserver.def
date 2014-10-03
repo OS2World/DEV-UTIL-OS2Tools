@@ -1,0 +1,7 @@
+;-------------------------------------
+; UDPSERVER.DEF module definition file
+;-------------------------------------
+
+NAME           UDPSERVER WINDOWCOMPAT
+DESCRIPTION    'UDP-Server (c) Patrick Haller'
+PROTMODE

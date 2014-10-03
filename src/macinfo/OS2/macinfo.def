@@ -1,0 +1,7 @@
+;------------------------------------
+; MacInfo.DEF module definition file
+;------------------------------------
+
+NAME           MacInfo  WINDOWCOMPAT
+DESCRIPTION    'MacInfo (c) Patrick Haller'
+PROTMODE

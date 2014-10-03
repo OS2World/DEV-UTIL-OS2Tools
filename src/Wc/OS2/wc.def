@@ -1,0 +1,7 @@
+;-------------------------------------
+; WordCount.DEF module definition file
+;-------------------------------------
+
+NAME           WordCount  WINDOWCOMPAT
+DESCRIPTION    'WordCount (c) Patrick Haller'
+PROTMODE

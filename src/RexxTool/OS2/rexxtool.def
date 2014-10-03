@@ -1,0 +1,27 @@
+LIBRARY REXXTOOL INITINSTANCE
+PROTMODE
+DESCRIPTION 'RexxTools (c) 1997-2002 Patrick Haller'
+
+DATA MULTIPLE NONSHARED
+
+IMPORTS
+	 DosQuerySysState   = DOSCALLS.368
+
+EXPORTS
+     RTLOADFUNCS            = RtLoadFuncs            @1
+     RTDROPFUNCS            = RtDropFuncs            @2
+     RTVERSION              = RtVersion              @3
+     RTSTRINGSPLIT          = RtStringSplit          @4
+     RTWORDWRAP             = RtWordWrap             @5
+     RTQUERYSYSINFO         = RtQuerySysInfo         @6
+     RTFILECOPY             = RtFileCopy             @7
+     RTFILEMOVE             = RtFileMove             @8
+     RTPROCESSKILL          = RtProcessKill          @9
+     RTSETPRIORITY          = RtSetPriority          @10
+     RTQUERYPATHINFO        = RtQueryPathInfo        @11
+     RTQUERYCTRYINFO        = RtQueryCtryInfo        @12
+     RTFILECHECKSUM         = RtFileChecksum         @13
+     RTQUERYMODULE          = RtQueryModule          @14
+     RTREPLACEMODULE        = RtReplaceModule        @15
+     RTQUERYPROCESS         = RtQueryProcess         @16
+     RTFILEDELETE           = RtFileDelete           @17

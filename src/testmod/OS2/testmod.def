@@ -1,0 +1,7 @@
+;-------------------------------------
+; TESTMOD.DEF module definition file
+;-------------------------------------
+
+NAME           TESTMOD  WINDOWCOMPAT
+DESCRIPTION    'TestModule (c) Patrick Haller'
+PROTMODE

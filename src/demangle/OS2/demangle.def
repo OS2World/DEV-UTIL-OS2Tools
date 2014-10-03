@@ -1,0 +1,7 @@
+;-------------------------------------
+; demangle.DEF module definition file
+;-------------------------------------
+
+NAME           Demangle WINDOWCOMPAT
+DESCRIPTION    'Demangle (c) Patrick Haller'
+PROTMODE

@@ -1,0 +1,7 @@
+;-------------------------------------
+; DUMP.DEF module definition file
+;-------------------------------------
+
+NAME           DUMP  WINDOWCOMPAT
+DESCRIPTION    'DUMP (c) Patrick Haller'
+PROTMODE

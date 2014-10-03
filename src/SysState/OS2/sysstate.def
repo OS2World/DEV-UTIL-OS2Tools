@@ -1,0 +1,14 @@
+;-------------------------------------
+; SysState.DEF module definition file
+;-------------------------------------
+
+NAME           SysState  WINDOWCOMPAT
+DESCRIPTION    'SysState (c) Patrick Haller'
+PROTMODE
+
+IMPORTS
+	_DosQuerySysState   = DOSCALLS.368
+	 DosQuerySysState   = DOSCALLS.368
+	_Dos32QuerySysState = DOSCALLS.368
+	 Dos32QuerySysState = DOSCALLS.368
+

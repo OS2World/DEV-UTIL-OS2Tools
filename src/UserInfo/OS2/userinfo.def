@@ -1,0 +1,7 @@
+;-------------------------------------
+; UserInfo.DEF module definition file
+;-------------------------------------
+
+NAME           UserInfo  WINDOWCOMPAT
+DESCRIPTION    'UserInfo (c) Patrick Haller'
+PROTMODE

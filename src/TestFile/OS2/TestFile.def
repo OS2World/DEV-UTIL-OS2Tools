@@ -1,0 +1,7 @@
+;-------------------------------------
+; TESTFILE.DEF module definition file
+;-------------------------------------
+
+NAME           TESTFILE  WINDOWCOMPAT
+DESCRIPTION    'TestFile (c) Patrick Haller'
+PROTMODE

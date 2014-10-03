@@ -1,0 +1,17 @@
+/***************************************************************************
+ * Name      : [TYP] [NAME]
+ * Funktion  : [FUNKTION]
+ * Parameter : [PARAMETER]
+ * Variablen : [VARIABLEN]
+ * Ergebnis  : [ERGEBNIS]
+ * Bemerkung : [BEMERKUNG]
+ *
+ * Autor     : [AUTOR] [[DATUM]]
+ ***************************************************************************/
+
+[TYP] [NAME] ([PARAMETER])
+{
+  APIRET rc = NO_ERROR;                                /* RÅckgabewert */
+
+  return (rc);                                 /* RÅckgabewert liefern */
+} /* [TYP] [NAME] */

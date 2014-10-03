@@ -1,0 +1,7 @@
+;-------------------------------------
+; KILL.DEF module definition file
+;-------------------------------------
+
+NAME           KILL WINDOWCOMPAT
+DESCRIPTION    'Kill (c) Patrick Haller'
+PROTMODE

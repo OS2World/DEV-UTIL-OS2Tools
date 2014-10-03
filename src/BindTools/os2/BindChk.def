@@ -1,0 +1,5 @@
+; $Id: BindChk.def,v 1.1 2001/06/07 14:10:41 bird Exp $
+;
+NAME BindChk WINDOWCOMPAT
+DESCRIPTION "BindTools - BindChk! Copyright (c) knut st. osmundsen 2001."
+

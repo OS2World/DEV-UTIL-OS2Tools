@@ -1,0 +1,7 @@
+;-------------------------------------
+; OS2Info.DEF module definition file
+;-------------------------------------
+
+NAME           OS2Info  WINDOWCOMPAT
+DESCRIPTION    'OS2Info (c) Patrick Haller'
+PROTMODE

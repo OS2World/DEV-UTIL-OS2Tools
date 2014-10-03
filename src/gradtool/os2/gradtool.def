@@ -1,0 +1,24 @@
+;-------------------------------------
+; GradTool.DEF module definition file
+;-------------------------------------
+
+NAME           GraddTool WINDOWCOMPAT
+DESCRIPTION    'GraddTool (c) Patrick Haller'
+PROTMODE
+
+
+IMPORTS
+   VHUnLockMem             = VMAN.7
+   VHCallForward           = VMAN.10
+   VMPointerBlt            = VMAN.9
+   VHPhysToVirt            = VMAN.4
+   VHGetVRAMInfo           = VMAN.5
+   VHMap                   = VMAN.13
+   SeamlessVDMCreated      = VMAN.11
+   VMIEntry                = VMAN.1
+   VHFreeMem               = VMAN.3
+   VHLockMem               = VMAN.6
+   VHMapVRAM               = VMAN.8
+   VHSetMTRR               = VMAN.14
+   VHAllocMem              = VMAN.2
+   SeamlessVDMDestroyed    = VMAN.12

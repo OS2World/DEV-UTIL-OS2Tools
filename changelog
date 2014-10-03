@@ -1,0 +1,256 @@
+/* $Id: changelog,v 1.69 2002/09/28 03:37:55 bird Exp $ */
+
+ 2002-09-27: knut st. osmundsen <bird@anduin.net>
+    - autochkdsk:
+                o Created a small util which runs chkdsk on all drives which
+                  are dirty.
+
+ 2002-09-19: knut st. osmundsen <bird@anduin.net>
+    - RM:       o Corrected a few minor issues.
+
+ 2002-09-18: knut st. osmundsen <bird@anduin.net>
+    - kCopy:    o Funny little two threaded copy program with
+                  multitarget and timing support.
+
+ 2002-08-22: knut st. osmundsen <bird@anduin.net>
+        - RM:   o Created a rm clone for the build system.
+                o Supports the most usual options including -r.
+                o OS/2 Features -F for using the 10x faster
+                  DosForceDelete api.
+                o Responsefiles.
+
+ 2002-08-07: Patrick Haller <patrick.haller@haller-gmbh.de>
+ 	- CPULOAD: added more CPU information (CPUID)
+        - MEMSPEED: started working on tiny CPU/FPU/MMX/SSE
+                    memory transfer benchmark
+
+ 2002-08-02: Patrick Haller <patrick.haller@haller-gmbh.de>
+        - Fix: display of hex return code
+
+ 2002-07-29: Patrick Haller <patrick.haller@haller-gmbh.de>
+        - added Rexx Scripts to build process
+        - started work on WarpIN Archive builder
+
+ 2002-07-28: Patrick Haller <patrick.haller@haller-gmbh.de>
+ 	- TIMEX: added timex too to measure command execution time
+
+ 2002-07-24: Patrick Haller <patrick.haller@haller-gmbh.de>
+ 	- IOSTREAM: fixed bug when writing to logical partition (LOG:C:)
+        - OS2INFO: enabled in build process
+
+ 2002-07-14: Patrick Haller <patrick.haller@haller-gmbh.de>
+ 	- FF: added file size search criteria
+
+ 2002-07-12: Patrick Haller <patrick.haller@haller-gmbh.de>
+ 	- FF: fixed duplicate display of filename
+
+ 2002-06-17: Patrick Haller <patrick.haller@innotek.de>
+        - added OS2ZLIB
+        - split IOSTREAM source
+
+ 2002-05-20: Patrick Haller <patrick.haller@innotek.de>
+        - added GRADTOOL tool (GRADD information)
+
+ 2002-04-23: Patrick Haller <patrick.haller@innotek.de>
+        - added WHOAMI tool
+
+ 2002-03-07: Patrick Haller <patrick.haller@innotek.de>
+        - IOSTREAM: added IOSTREAM tool as (better) replacement for
+          Netcat (just read the original source of netcat and you know why)
+
+ 2002-03-05: Patrick Haller <patrick.haller@innotek.de>
+        - DUMP: fixed and improved follow mode
+        - NETBIOS: added ADDNAME and ADDGRNAME support
+
+ 2002-02-07: Patrick Haller <patrick.haller@innotek.de>
+        - added quick'n'dirty DSKCPY1 tool
+          (copies / compares physical disks)
+        - improvements on DISKSCAN
+          (starting cylinder, ending cylinder support,
+           dump read partition to stdout)
+
+ 2002-01-24: knut st. osmundsen <bird@anduin.net>
+        - Added support for buffered inserts in bindprep and bindit.
+        - New minor version for bindtools.
+
+ 2002-01-24: knut st. osmundsen <bird@anduin.net>
+        - New quick and dirty util: Cmp. (I needed it for the BindTools testcases.)
+        - TOOL_CMD is defined as short for /tools/bin/cmp.exe.
+          It's there because it's a nice too when writing testcases.
+        - 4OS/2 has a noisy copy command. Defined BUILD_SHELL=4OS2 if you
+          have 4OS2 and wanna make it quiet.
+        - Still fixing bugs in kFileBnd and the BindTools.
+        - Improoved BindSet testcases.
+
+ 2002-01-23: knut st. osmundsen <bird@anduin.net>
+        - Enabled line numbers in the mapfile on release build.
+        - The clean rule didn't clean properly. corrected.
+        - Fixed the last known bugs in BindSet/kFileBND/kFileLX.
+        - Add rexx scripts know uses 'Address CMD' when starting command.
+        - Also added a few missing 'call' in front of commands so we can
+          execute rexx scripts too.
+        - BindTools is nearly ready for the 1.1.1 release.
+        - Synced FastDep and CmdQd with Odin32. New FastDep binary.
+          (This corrects some annoying bugs in fastdep...)
+
+ 2002-01-18: Patrick Haller <patrick.haller@innotek.de>
+        - added RtFileDelete() to REXXTOOL.DLL
+
+ 2002-01-17: knut st. osmundsen <bird@anduin.net>
+        - Added testcase rule to process.mak.
+          This will process any testcases in either a
+          .\testcase subdir or .\testcase.mak file. The
+          main rule of suck a file or directory is 'testcase'.
+        - Started setting up a decent automatic build system.
+          This is located in /tools/automaticbuild.
+
+ 2002-01-14: Patrick Haller <patrick.haller@innotek.de>
+        - added RtQueryModule(NULL) and RtQueryProcess()
+          to REXXTOOL.DLL
+
+ 2002-01-11: Patrick Haller <patrick.haller@innotek.de>
+        - improved RexxTools dll
+          (added RxFileChecksum, RxQueryModule, RxReplaceModule)
+        - CRC32 fixes
+
+ 2002-01-10: Patrick Haller <patrick.haller@innotek.de>
+        - added DLLRNAME tool
+
+ 2001-11-27: Patrick Haller <patrick.haller@innotek.de>
+        - added DEMANGLE tool for VAC C++ name demangling
+        - added further CRT (C++) exports to TOOLRT dll
+
+ 2001-11-23: knut st. osmundsen <kosmunds@csc.com>
+        - Corrected a few bugs in kFileBND and somewhat support
+          for 'compressed' MicroFocus Cobol structures.
+        - Some more coding/messing on kFileOMF.
+        - Added profile libraries to VAC308 profiling setup.
+
+ 2001-09-24: Patrick Haller <patrick.haller@innotek.de>
+        - created PMStart tool
+        - bugfix in TREE tool when starting w/o initial argument
+
+ 2001-09-21: Patrick Haller <patrick.haller@innotek.de>
+        - created UNIQ tool
+
+ 2001-09-04: knut st. osmundsen <kosmunds@csc.com>
+        - Updated CmdQd. Bugfixes and performance enh.
+          (Will incorporate it in build environment some day..)
+        - Synced FastDep with Odin32.
+
+ 2001-08-13: Patrick Haller <patrick.haller@innotek.de>
+        - added support for dynamic LIBPATH (DosQueryHeaderInfo)
+          to CHKPATH and fixed some minor bugs.
+        - added Kernel's idea of CPU type to CPULOAD
+        - added non-outout-file option to REPLACE
+
+ 2001-08-03: Patrick Haller <patrick.haller@innotek.de>
+        - TOOLRT: workaround for Y2K-Bug in CRT -> Logging-APIs
+
+ 2001-06-19: Patrick Haller <patrick.haller@innotek.de>
+        - added WHICH tool
+        - improved error messages on WC
+
+ 2001-06-18: knut st. osmundsen <knut.stange.osmundsen@mynd.no>
+        - Added TARGET_DOCS to the make system. This macro contains
+          a list of documentation which is to be installed together
+          with the binaries. Install copies these to PATH_DOC
+          (currently /bin).
+        - BindTools are nearly at beta stage.
+          Added a faster precompiler (compared to sqlprep), BindPrep.
+          Wrote readme file. (BindTool.txt)
+
+ 2001-06-18: Patrick Haller <patrick.haller@innotek.de>
+        - INFO: MD5 and CRC32 calculation while reading is enabled and
+          working properly. If only /MD5 or /CRC32 is specified,
+          /READ and /READ.CACHE is automatically implied.
+
+ 2001-06-10: knut st. osmundsen <knut.stange.osmundsen@mynd.no>
+        - BindTools are maturing. These tools manipulates DB2 bind
+          files. Very useful when working with applications which
+          uses embedded SQL. (Like I do, a system with 500+ bindfiles.)
+        - Have imported the common classes from Odin32 /tools/common.
+          Its mostly file and fileformat classes. These are not at
+          all completed, but they are extended when needed.
+          BindTools uses them.
+        - FastDep is optimized slightly. don't scan old files if we can
+          use existing .depend file.
+        - Linker option /EXE is /EXEPACK not /EXECutable. Corrected this.
+
+ 2001-05-23: Patrick Haller <patrick.haller@innotek.de>
+        - DISKSCAN: added F6F6F6F6 pattern to erase
+
+ 2001-05-22: Patrick Haller <patrick.haller@innotek.de>
+        - DISKSCAN: fixed wrong cylinder count
+                    added support for different erase patterns
+        - TOOLRT: fixed MD5 checksum calculation (wrong export)
+
+ 2001-05-21: Patrick Haller <patrick.haller@innotek.de>
+        - DISKSCAN: added /erase option to erase physical disk
+
+ 2001-05-16: knut st. osmundsen <knut.stange.osmundsen@mynd.no>
+        - Synched bulid environment with PHP.
+        - Added colors to output...
+        - Rennamed the compiler setup.* files to setup.*.mk.
+          Helps editors apply syntax highlighting...
+        - Added doc\make.txt (not completed yet.
+        - Fastdep should depend on toolrt.dll.
+
+ 2001-04-27: Patrick Haller <patrick.haller@innotek.de>
+        - Added filefind tool (first rough version, just a derivate
+          of the deldir-code. So better beware ... ;-)
+        - added support for OS/2, Release, VisualAge C++ 3.08
+          (setup.os2relvac308)
+
+ 2001-03-22: knut st. osmundsen <knut.stange.osmundsen@mynd.no>
+        - added _PGLOBAL_PTR and _exception_dllinit to toolrt.dll;
+          not sure if this is correct.
+        - Many addjustments and enhancements to the build system.
+
+ 2001-03-15: Patrick Haller <patrick.haller@innotek.de>
+        - found header of Dos16QueryModFromCS and so fixed REPLMOD
+        - Updated FASTDEP to version 0.32 (tnx to Knut)
+        - created initial version of the MEM tool
+        - fixed and updated UPTIME w/ Int10ServiceVDM info
+          and wrong VIRTUALADDRESSLIMIT display
+
+ 2001-03-14: Patrick Haller <patrick.haller@innotek.de>
+        - created skeleton for new tool: Environment variable editor
+
+ 2001-03-09: Patrick Haller <patrick.haller@innotek.de>
+        - added 64-bit (floating point) support to DU in order to
+          be able to handle extremely large directory sizes (summing up)
+        - added StrValueToSizeFloat function to ToolRT, raised version to 1.06
+          This also includes better formatting sizes above 10GB
+        - adapted "tree" to use ToolRT functions
+        - added MD5 and CRC32 calculation to the INFO tool
+
+ 2001-03-07: Patrick Haller <patrick.haller@innotek.de>
+        - added documentation for cvssec
+
+ 2001-03-02: Patrick Haller <patrick.haller@innotek.de>
+        - brought udpclient and udpserver in line with the rest
+        - some C++ setup fixes for VAC308
+
+ 2001-03-01: Patrick Haller <patrick.haller@innotek.de>
+        - most of the standard targets get built, link dynamically
+          to TOOLRT.DLL as tool library and C-runtime.
+        - TOOLRT.DLL gets built fine as C-runtime
+          Note: one has got to add VAC C-runtime functions as required
+        - Bug: inference rules don't work quite correctly presently
+        - build system is now up and running - although
+          the produced images are not yet "that correct"
+        - linker now (basically) working
+        - further improvements on the build system
+          compiler is compiling now, linker ... not :(
+
+ 2001-02-27: Patrick Haller <patrick.haller@innotek.de>
+        - added first version of multi-platform, multi-mode,
+          multi-environment build system
+
+ 2001-02-23: Patrick Haller <patrick.haller@innotek.de>
+        - added missing sources
+
+ 2001-02-15: Patrick Haller <patrick.haller@innotek.de>
+        - creation of project
+        - added experimental code snippets

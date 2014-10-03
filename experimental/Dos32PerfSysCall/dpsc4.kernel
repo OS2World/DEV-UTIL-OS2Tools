@@ -1,0 +1,485 @@
+/*
+ * OS2KRNL_VR32IPerfSysCall
+ */
+APIRET OS2KRNL_VR32IPerfSysCall (ULONG ulCommand, /* ebp+50 */
+                                 ULONG ulParam1,  /* ebp+54 */
+                                 ULONG ulParam2,  /* ebp+58 */
+                                 ULONG ulParam3)  /* ebp+5c */
+{
+  APIRET rc = NO_ERROR; /* API return code */
+  
+  switch (ulCommand)
+  {
+%fff702ec 55                 push    ebp 
+%fff702ed 8bec               mov     ebp,esp 
+%fff702ef 83ec04             sub     esp,+04 
+%fff702f2 c745fc00000000     mov     dword ptr [ebp-04],00000000 
+%fff702f9 8b4550             mov     eax,dword ptr [ebp+50] 
+
+%fff702fc 83e840             sub     eax,+40          ;'@' 
+%fff702ff 7434               jz      %fff70335 
+    case CMD_GETPERFBUFFER: /* 0x40 */
+%fff70335 ff7558             push    dword ptr [ebp+58] 
+%fff70338 ff7554             push    dword ptr [ebp+54] 
+%fff7033b e806020000         call    %fff70546 ; GetPerfBuffer
+%fff70340 eb18               jmp     %fff7035a 
+      GetPerfBuffer(ulParam1,
+                    ulParam2);
+      break;    
+
+%fff70301 48                 dec     eax 
+%fff70302 744b               jz      %fff7034f 
+    case CMD_INFOPERFBUFFER: /* 0x41 */
+%fff7034f ff7558             push    dword ptr [ebp+58] 
+%fff70352 ff7554             push    dword ptr [ebp+54] 
+%fff70355 e8e9020000         call    %fff70643 ; InfoPerfBuffer
+      InfoPerfBuffer(ulParam1,
+                     ulParam2);
+      break;
+      
+%fff70304 48                 dec     eax 
+%fff70305 7416               jz      %fff7031d 
+    case CMD_INITPERFBUFFER: /* 0x42 */
+  
+%fff7031d ff7554             push    dword ptr [ebp+54] 
+%fff70320 e85c000000         call    %fff70381 ; InitPerfBuffer
+      rc = InitPerfBuffer(ulParam1);
+      break:
+
+%fff70307 48                 dec     eax 
+%fff70308 7424               jz      %fff7032e 
+    case CMD_FREEPERFBUFFER: /* 0x43 */
+%fff7032e e8d3010000         call    %fff70506 ; FreePerfBuffer
+%fff70333 ebf1               jmp     %fff70326 
+      FreePerfBuffer();
+      break;
+      
+%fff7030a 83e80f             sub     eax,+0f 
+%fff7030d 7433               jz      %fff70342 
+    case CMD_GETPERFBUFFERHEADERS: /* 0x52 */
+%fff70342 ff7558             push    dword ptr [ebp+58] 
+%fff70345 ff7554             push    dword ptr [ebp+54] 
+%fff70348 e874020000         call    %fff705c1 ; GetPerfBufferHeaders
+%fff7034d eb0b               jmp     %fff7035a 
+      GetPerfBufferHeaders(ulParam1,
+                           ulParam2);
+                           
+      break;
+
+%fff7030f 83e80e             sub     eax,+0e 
+%fff70312 7449               jz      %fff7035d 
+    case CMD_KI_ENABLE: /* 0x60 */
+%fff7035d e81a030000         call    %fff7067c ; PerfKIEnable
+%fff70362 ebc2               jmp     %fff70326 
+      PerfKIEnable();
+      break;
+
+%fff70314 48                 dec     eax 
+%fff70315 744d               jz      %fff70364 
+    case CMD_KI_DISABLE: /* 0x61 */
+%fff70364 e81b030000         call    %fff70684 ; PerfKIDisable
+%fff70369 ebbb               jmp     %fff70326 
+      PerfKIDisable();
+      break;
+      
+%fff70317 48                 dec     eax 
+%fff70318 48                 dec     eax 
+%fff70319 7450               jz      %fff7036b 
+    case CMD_KI_RDCNT: /* 0x63 */
+%fff7036b ff7554             push    dword ptr [ebp+54] 
+%fff7036e e819030000         call    %fff7068c ; PerfKIRdCnt
+%fff70373 ebb0               jmp     %fff70325 
+      PerfKIRdCnt(ulParam1);
+      break;
+      
+%fff7031b eb58               jmp     %fff70375 
+    default:
+%fff70375 c745fc01000000     mov     dword ptr [ebp-04],00000001 
+%fff7037c 8b45fc             mov     eax,dword ptr [ebp-04] 
+%fff7037f c9                 leave 
+%fff70380 c3                 retd 
+      rc = ERROR_INVALID_FUNCTION;
+      break;
+  }
+
+%fff70325 59                 pop     ecx 
+%fff70326 8945fc             mov     dword ptr [ebp-04],eax 
+%fff70329 8b45fc             mov     eax,dword ptr [ebp-04] 
+%fff7032c c9                 leave 
+%fff7032d c3                 retd 
+  return (rc);
+}
+
+%fff7035a 59                 pop     ecx 
+%fff7035b ebc8               jmp     %fff70325 
+
+
+/*
+ * OS2KRNL_InitPerfBuffer
+ */
+APIRET OS2KRNL_InitPerfBuffer (ULONG ulParam1,  /* ebp+4 */
+                               ULONG ulParam2)  /* ebp+8 */
+{                               
+%fff7038c c7857cffffff00000000 mov     dword ptr [ebp+ffffff7c],00000000 
+  APIRET rc = NO_ERROR; /* %ffffff7c */
+  ULONG  ulLoop2; /* ffffff70 */
+  ULONG  ulLoop;  /* ffffff74 */  
+  /* ffffff78 */
+  ARRAY  arr[16]; /* 8 byte structure ffffff80 */
+  
+%fff70381 55                 push    ebp 
+%fff70382 8bec               mov     ebp,esp 
+%fff70384 81ec90000000       sub     esp,00000090 
+%fff7038a 53                 push    ebx 
+%fff7038b 57                 push    edi 
+
+%fff70396 a1acb8f1ff         mov     eax,dword ptr [_pPSA] 
+%fff7039b 833800             cmp     dword ptr [eax],+00 
+%fff7039e 7552               jnz     %fff703f2 
+   if (pPSA != NULL)
+     return (rc);
+
+%fff703a0 817d0800100000     cmp     dword ptr [ebp+08],00001000 
+%fff703a7 7307               jnc     %fff703b0 
+%fff703a9 c7450800003000     mov     dword ptr [ebp+08],00300000 
+   if (ulParam2 < 0x1000)
+     ulParam2 = 0x300000;
+     
+%fff703b0 81450800020000     add     dword ptr [ebp+08],00000200 
+   ulParam2 += 512;
+   
+   for (ulLoop = 0;
+%fff703b7 c78574ffffff00000000 mov     dword ptr [ebp+ffffff74],00000000 
+%fff703c1 e9c8000000         jmp     %fff7048e 
+   {
+     do
+     {
+%fff703c6 6a00               push    +00 
+%fff703c8 6a00               push    +00 
+%fff703ca ff74c580           push    dword ptr [ebp+eax*8-80] 
+%fff703ce e8c2d40000         call    %fff7d895 ; VMFreeMem
+       VMFreeMem(&arr[ulLoop2],  /* some array ebp+eax*8-80 */
+                 0,
+                 0);
+     
+%fff703d3 a1acb8f1ff         mov     eax,dword ptr [_pPSA] 
+%fff703d8 c70000000000       mov     dword ptr [eax],00000000 
+       pPSA = NULL;
+     
+%fff703de ff8570ffffff       inc     dword ptr [ebp+ffffff70] 
+%fff703e4 8b8570ffffff       mov     eax,dword ptr [ebp+ffffff70] 
+       ulLoop2++;
+     }
+%fff703ea 398574ffffff       cmp     dword ptr [ebp+ffffff74],eax 
+%fff703f0 7fd4               jg      %fff703c6 
+     while (ulLoop2 > ulLoop);
+     
+%fff703f2 8b857cffffff       mov     eax,dword ptr [ebp+ffffff7c] 
+%fff703f8 5f                 pop     edi 
+%fff703f9 5b                 pop     ebx 
+%fff703fa c9                 leave 
+%fff703fb c3                 retd 
+   return (rc);
+   
+%fff703fc a1acb8f1ff         mov     eax,dword ptr [_pPSA] 
+%fff70401 8b8d74ffffff       mov     ecx,dword ptr [ebp+ffffff74] 
+%fff70407 c1e103             shl     ecx,03 
+%fff7040a 8b540d80           mov     edx,dword ptr [ebp+ecx-80] 
+       edx = &arr[ulLoop];
+%fff7040e 8910               mov     dword ptr [eax],edx 
+       *pPSA = edx;
+%fff70410 8bd1               mov     edx,ecx 
+%fff70412 8b4d08             mov     ecx,dword ptr [ebp+08] ; ulParam2
+%fff70415 8b18               mov     ebx,dword ptr [eax] ; ebx = pPSA
+%fff70417 8bfb               mov     edi,ebx 
+
+%fff70419 52                 push    edx 
+%fff7041a 8bd1               mov     edx,ecx 
+%fff7041c c1e902             shr     ecx,02 
+%fff7041f 2bc0               sub     eax,eax 
+%fff70421 f3ab               repe stosd 
+%fff70423 87d1               xchg    ecx,edx 
+%fff70425 81e103000000       and     ecx,00000003 
+%fff7042b f3aa               repe stosb 
+%fff7042d 5a                 pop     edx 
+                             memset(edi,
+                                    0,
+                                    ebp+08);
+                             
+%fff7042e 899d78ffffff       mov     dword ptr [ebp+ffffff78],ebx 
+%fff70434 398574ffffff       cmp     dword ptr [ebp+ffffff74],eax 
+%fff7043a 7409               jz      %fff70445 
+%fff7043c 8b841578ffffff     mov     eax,dword ptr [ebp+edx+ffffff78] 
+%fff70443 8903               mov     dword ptr [ebx],eax 
+
+%fff70445 8b8578ffffff       mov     eax,dword ptr [ebp+ffffff78] 
+%fff7044b 8b0dacb8f1ff       mov     ecx,dword ptr [_pPSA] 
+%fff70451 8b5108             mov     edx,dword ptr [ecx+08] 
+%fff70454 895004             mov     dword ptr [eax+04],edx 
+%fff70457 8b490c             mov     ecx,dword ptr [ecx+0c] 
+%fff7045a 894808             mov     dword ptr [eax+08],ecx 
+%fff7045d 8b4d08             mov     ecx,dword ptr [ebp+08] 
+%fff70460 894814             mov     dword ptr [eax+14],ecx 
+%fff70463 03c8               add     ecx,eax 
+%fff70465 894818             mov     dword ptr [eax+18],ecx 
+%fff70468 668b8d74ffffff     mov     cx,word ptr [ebp+ffffff74] 
+%fff7046f 6689482a           mov     word ptr [eax+2a],cx 
+%fff70473 8d8800020000       lea     ecx,[eax+00000200] 
+%fff70479 89481c             mov     dword ptr [eax+1c],ecx 
+%fff7047c 894820             mov     dword ptr [eax+20],ecx 
+%fff7047f 8b0d04bef1ff       mov     ecx,dword ptr [fff1be04] 
+%fff70485 894824             mov     dword ptr [eax+24],ecx 
+%fff70488 ff8574ffffff       inc     dword ptr [ebp+ffffff74] 
+
+%fff7048e a1b0b8f1ff         mov     eax,dword ptr [_cProcessors] 
+%fff70493 398574ffffff       cmp     dword ptr [ebp+ffffff74],eax 
+%fff70499 7d4e               jge     %fff704e9 
+%fff7049b 8b8574ffffff       mov     eax,dword ptr [ebp+ffffff74] 
+%fff704a1 c1e003             shl     eax,03 
+%fff704a4 8d440580           lea     eax,[ebp+eax-80] 
+%fff704a8 0305b4b2f1ff       add     eax,dword ptr [fff1b2b4] 
+
+%fff704ae 50                 push    eax 
+%fff704af 6a00               push    +00 
+%fff704b1 6a00               push    +00 
+%fff704b3 6a00               push    +00 
+%fff704b5 682aff0000         push    0000ff2a 
+%fff704ba 6a00               push    +00 
+%fff704bc 6802040000         push    00000402 
+%fff704c1 ff7508             push    dword ptr [ebp+08] 
+%fff704c4 ff7508             push    dword ptr [ebp+08] 
+%fff704c7 e848cd0000         call    %fff7d214 ; VMAllocMem
+          rc = VMAllocMem(ebp+8,
+                          ebp+8,
+                          0x00000402,
+                          0,
+                          0x0000ff2a,
+                          0,
+                          0,
+                          0,
+                          eax);
+             
+%fff704cc 89857cffffff       mov     dword ptr [ebp+ffffff7c],eax 
+%fff704d2 0bc0               or      eax,eax 
+%fff704d4 0f8422ffffff       jz      %fff703fc 
+%fff704da c78570ffffff00000000 mov     dword ptr [ebp+ffffff70],00000000 
+%fff704e4 e9fbfeffff         jmp     %fff703e4 
+
+%fff704e9 8b4580             mov     eax,dword ptr [ebp-80] 
+%fff704ec 898578ffffff       mov     dword ptr [ebp+ffffff78],eax 
+%fff704f2 8b0db0b8f1ff       mov     ecx,dword ptr [_cProcessors] 
+%fff704f8 8b8ccd78ffffff     mov     ecx,dword ptr [ebp+ecx*8+ffffff78] 
+%fff704ff 8908               mov     dword ptr [eax],ecx 
+%fff70501 e9ecfeffff         jmp     %fff703f2 
+
+
+
+/*
+ * OS2KRNL: FreePerfBuffer
+ */
+APIRET OS2KRNL_FreePerfBuffer: 
+{
+%fff70506 55                 push    ebp 
+%fff70507 8bec               mov     ebp,esp 
+%fff70509 83ec08             sub     esp,+08
+%fff7050c 2bc0               sub     eax,eax 
+%fff7050e 8945fc             mov     dword ptr [ebp-04],eax 
+%fff70511 8945f8             mov     dword ptr [ebp-08],eax 
+  APIRET rc = NO_ERROR; /* API-Returncode */
+  ULONG  ulLoop = 0;    /* loop counter   */
+
+  for (;
+       ulLoop <= cProcessors;
+       ulLoop++)
+  {
+%fff70514 eb21               jmp     %fff70537 
+%fff70516 6a00               push    +00 
+%fff70518 6a00               push    +00 
+%fff7051a a1acb8f1ff         mov     eax,dword ptr [_pPSA] 
+%fff7051f ff30               push    dword ptr [eax] 
+%fff70521 e86fd30000         call    %fff7d895 ; VMFreeMem
+%fff70526 8945fc             mov     dword ptr [ebp-04],eax 
+    rc = VMFreeMem(*pPSA,
+                   0,
+                   0);
+%fff70529 a1acb8f1ff         mov     eax,dword ptr [_pPSA] 
+%fff7052e c70000000000       mov     dword ptr [eax],00000000 
+    *pPSA = NULL;
+
+%fff70534 ff45f8             inc     dword ptr [ebp-08] 
+%fff70537 a1b0b8f1ff         mov     eax,dword ptr [_cProcessors] 
+%fff7053c 3945f8             cmp     dword ptr [ebp-08],eax 
+%fff7053f 7cd5               jl      %fff70516 
+  }
+
+%fff70541 8b45fc             mov     eax,dword ptr [ebp-04] 
+%fff70544 c9                 leave 
+%fff70545 c3                 retd 
+  return (rc); /* return the return code */
+}
+
+
+/*
+ * OS2KRNL: GetPerfBuffer
+ */
+APIRET OS2KRNL_GetPerfBuffer (ULONG ulCommand,
+                              ULONG ulParam1,
+                              ULONG ulParam2,
+                              ULONG ulParam3)
+{
+  ULONG ulLength; /* buffer size, ebp-0c */
+  ULONG ulCounter; /* loop iterator, ebp-10 */
+%fff70546 55                 push    ebp 
+%fff70547 8bec               mov     ebp,esp 
+%fff70549 83ec10             sub     esp,+10 
+%fff7054c a1acb8f1ff         mov     eax,dword ptr [_pPSA] 
+%fff70551 8b00               mov     eax,dword ptr [eax] 
+%fff70553 0bc0               or      eax,eax 
+%fff70555 7468               jz      %fff705bf
+  if (*pPSA != NULL)
+  {
+%fff70557 8b4014             mov     eax,dword ptr [eax+14] 
+%fff7055a 8945f4             mov     dword ptr [ebp-0c],eax 
+     ulLength = pPSA->"+14"; /* 100h bytes buffer size */
+     
+%fff7055d f725b0b8f1ff       mul     dword ptr [_cProcessors] 
+%fff70563 3b450c             cmp     eax,dword ptr [ebp+0c] 
+%fff70566 7607               jbe     %fff7056f 
+     if ([epb+0c] < cProcessors * ulLength )
+%fff70568 b857000000         mov     eax,00000057 
+%fff7056d c9                 leave 
+%fff7056e c3                 retd 
+                             return (ERROR_INVALID_PARAMETER);
+
+%fff7056f c745f000000000     mov     dword ptr [ebp-10],00000000 
+%fff70576 eb34               jmp     %fff705ac 
+     for ([ebp-10] = 0;
+          [ebp-10] <= _cProcessors;
+          [ebp-10]++)
+     {
+
+%fff70578 a1acb8f1ff         mov     eax,dword ptr [_pPSA] 
+%fff7057d 8b08               mov     ecx,dword ptr [eax] 
+        ecx = *pPSA; 
+%fff7057f 8b5008             mov     edx,dword ptr [eax+08] 
+%fff70582 89510c             mov     dword ptr [ecx+0c],edx 
+        ecx+0c = *pPSA + 8;
+%fff70585 8b500c             mov     edx,dword ptr [eax+0c] 
+%fff70588 895110             mov     dword ptr [ecx+10],edx 
+        ecx+10 = *pPSA + 0c;
+%fff7058b 8b4010             mov     eax,dword ptr [eax+10] 
+%fff7058e 89412c             mov     dword ptr [ecx+2c],eax 
+        ecx+2c = *pPSA + 10;
+
+%fff70591 6a03               push    +03 
+%fff70593 ff75f4             push    dword ptr [ebp-0c] 
+%fff70596 51                 push    ecx 
+%fff70597 ff7508             push    dword ptr [ebp+08] 
+%fff7059a e816f1ffff         call    _TKSuBuff
+        rc = _TKSuBuff(ulParam2, /* [ebp+08] */
+                       *pPSA,    /* ecx      */
+                       ulLength, /* [ebp-0c] */
+                       3);       /* ?        */
+%fff7059f 0bc0               or      eax,eax 
+%fff705a1 751c               jnz     %fff705bf 
+        if (rc != NO_ERROR)      /* check for errors  */
+          return (rc);           /* then return error */
+          
+%fff705a3 8b45f4             mov     eax,dword ptr [ebp-0c] 
+%fff705a6 014508             add     dword ptr [ebp+08],eax 
+        ulParam2 += ulLength; /* set to next CPU position */
+        
+%fff705a9 ff45f0             inc     dword ptr [ebp-10] 
+%fff705ac 8b45f0             mov     eax,dword ptr [ebp-10] 
+%fff705af 3905b0b8f1ff       cmp     dword ptr [_cProcessors],eax 
+%fff705b5 7fc1               jg      %fff70578 
+      }
+%fff705b7 a1b0b8f1ff         mov     eax,dword ptr [_cProcessors] 
+%fff705bc f76df4             imul    dword ptr [ebp-0c] 
+  }
+%fff705bf c9                 leave 
+%fff705c0 c3                 retd 
+
+
+OS2KRNL _GetPerfBufferHeaders: 
+%fff705c1 55                 push    ebp 
+%fff705c2 8bec               mov     ebp,esp 
+%fff705c4 83ec10             sub     esp,+10 
+%fff705c7 2bc0               sub     eax,eax 
+%fff705c9 8945fc             mov     dword ptr [ebp-04],eax 
+%fff705cc 8b0dacb8f1ff       mov     ecx,dword ptr [_pPSA] 
+%fff705d2 8b09               mov     ecx,dword ptr [ecx] 
+%fff705d4 0bc9               or      ecx,ecx 
+%fff705d6 7469               jz      %fff70641 
+%fff705d8 a1b0b8f1ff         mov     eax,dword ptr [_cProcessors] 
+%fff705dd c1e009             shl     eax,09 
+%fff705e0 3b450c             cmp     eax,dword ptr [ebp+0c] 
+%fff705e3 7607               jbe     %fff705ec 
+%fff705e5 b857000000         mov     eax,00000057 
+%fff705ea c9                 leave 
+%fff705eb c3                 retd 
+%fff705ec c745f000000000     mov     dword ptr [ebp-10],00000000 
+%fff705f3 eb3e               jmp     %fff70633 
+%fff705f5 a1acb8f1ff         mov     eax,dword ptr [_pPSA] 
+%fff705fa 8b08               mov     ecx,dword ptr [eax] 
+%fff705fc 8b5008             mov     edx,dword ptr [eax+08] 
+%fff705ff 89510c             mov     dword ptr [ecx+0c],edx 
+%fff70602 8b500c             mov     edx,dword ptr [eax+0c] 
+%fff70605 895110             mov     dword ptr [ecx+10],edx 
+%fff70608 8b4010             mov     eax,dword ptr [eax+10] 
+%fff7060b 89412c             mov     dword ptr [ecx+2c],eax 
+%fff7060e 6a03               push    +03 
+%fff70610 6800020000         push    00000200 
+%fff70615 51                 push    ecx 
+%fff70616 ff7508             push    dword ptr [ebp+08] 
+%fff70619 e897f0ffff         call    %fff6f6b5 ; TKSuBuff
+%fff7061e 0bc0               or      eax,eax 
+%fff70620 751f               jnz     %fff70641 
+%fff70622 8145fc00020000     add     dword ptr [ebp-04],00000200 
+%fff70629 81450800020000     add     dword ptr [ebp+08],00000200 
+%fff70630 ff45f0             inc     dword ptr [ebp-10] 
+%fff70633 8b45f0             mov     eax,dword ptr [ebp-10] 
+%fff70636 3905b0b8f1ff       cmp     dword ptr [_cProcessors],eax 
+%fff7063c 7fb7               jg      %fff705f5 
+%fff7063e 8b45fc             mov     eax,dword ptr [ebp-04] 
+%fff70641 c9                 leave 
+%fff70642 c3                 retd 
+
+
+/* returns buffer size and number of processors */
+OS2KRNL _InfoPerfBuffer: 
+%fff70643 55                 push    ebp 
+%fff70644 8bec               mov     ebp,esp 
+%fff70646 83ec0c             sub     esp,+0c 
+%fff70649 a1acb8f1ff         mov     eax,dword ptr [_pPSA] 
+%fff7064e 8b00               mov     eax,dword ptr [eax] 
+%fff70650 0bc0               or      eax,eax 
+%fff70652 7409               jz      %fff7065d 
+%fff70654 8b4014             mov     eax,dword ptr [eax+14] 
+%fff70657 f725b0b8f1ff       mul     dword ptr [_cProcessors] 
+%fff7065d ff7508             push    dword ptr [ebp+08] 
+%fff70660 50                 push    eax 
+%fff70661 e88ff0ffff         call    %fff6f6f5 ; TKSuDWord
+%fff70666 0bc0               or      eax,eax 
+%fff70668 750e               jnz     %fff70678 
+%fff7066a ff750c             push    dword ptr [ebp+0c] 
+%fff7066d ff35b0b8f1ff       push    dword ptr [_cProcessors] 
+%fff70673 e87df0ffff         call    %fff6f6f5 ; TKSuDWord
+%fff70678 c9                 leave 
+%fff70679 c3                 retd 
+%fff7067a 0000               add     byte ptr [eax],al 
+
+
+
+OS2KRNL _PerfKIEnable: 
+%fff7067c e8470dfeff         call    %fff513c8 ; KIEnable
+%fff70681 2bc0               sub     eax,eax 
+%fff70683 c3                 retd 
+
+
+
+OS2KRNL _PerfKIDisable: 
+%fff70684 e82c0efeff         call    %fff514b5 ; KIDisable
+%fff70689 2bc0               sub     eax,eax 
+%fff7068b c3                 retd 
+

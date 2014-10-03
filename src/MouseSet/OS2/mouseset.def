@@ -1,0 +1,7 @@
+;-------------------------------------
+; MOUSESET.DEF module definition file
+;-------------------------------------
+
+NAME            MOUSESET  WINDOWCOMPAT
+DESCRIPTION     'MouseSet (c) Patrick Haller'
+PROTMODE
